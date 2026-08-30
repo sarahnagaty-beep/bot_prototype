@@ -6,7 +6,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "IG_RETARGETING_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "end_user",
@@ -67,7 +67,7 @@
       "consultant": "Youssef Adel",
       "last_node": "N8",
       "sessions": 2,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201009876543": {
       "wa_id": "+201009876543",
@@ -75,7 +75,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "FB_LEADGEN_INVEST_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "investor",
@@ -140,7 +140,7 @@
       "consultant": "Youssef Adel",
       "last_node": "N8",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201112223344": {
       "wa_id": "+201112223344",
@@ -148,7 +148,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "IG_LEADGEN_OCTOBER_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "end_user",
@@ -209,7 +209,7 @@
       "consultant": "",
       "last_node": "N8",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201223334455": {
       "wa_id": "+201223334455",
@@ -217,7 +217,7 @@
       "language": "en",
       "source": "website",
       "source_ref": "WEBSITE_CHAT",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "end_user",
@@ -278,7 +278,7 @@
       "consultant": "Nour Ibrahim",
       "last_node": "N8",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201556667788": {
       "wa_id": "+201556667788",
@@ -286,7 +286,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "IG_LEADGEN_BRAND_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": false,
       "opted_out": false,
       "buyer_type": "",
@@ -324,7 +324,7 @@
       "consultant": "",
       "last_node": "N_BROWSE_SAVE",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201667778899": {
       "wa_id": "+201667778899",
@@ -332,7 +332,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "IG_LEADGEN_NORTHCOAST_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "end_user",
@@ -387,7 +387,7 @@
       "consultant": "",
       "last_node": "N8",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201778889900": {
       "wa_id": "+201778889900",
@@ -395,7 +395,7 @@
       "language": "en",
       "source": "qr",
       "source_ref": "QR_BILLBOARD_RING_ROAD",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "",
@@ -427,7 +427,7 @@
       "consultant": "Karim Saleh",
       "last_node": "N11_HUMAN",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201889990011": {
       "wa_id": "+201889990011",
@@ -435,7 +435,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "IG_LEADGEN_BRAND_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "broker",
@@ -467,7 +467,7 @@
       "consultant": "",
       "last_node": "N1",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     "+201990001122": {
       "wa_id": "+201990001122",
@@ -475,7 +475,7 @@
       "language": "en",
       "source": "meta_ad",
       "source_ref": "FB_LEADGEN_ZAYED_Q3",
-      "entry_at": "2026-08-30T12:36:58+00:00",
+      "entry_at": "2026-08-30T14:39:54+00:00",
       "consent": true,
       "opted_out": false,
       "buyer_type": "end_user",
@@ -536,20 +536,20 @@
       "consultant": "Mariam Fahmy",
       "last_node": "N8",
       "sessions": 1,
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "updated_at": "2026-08-30T14:39:54+00:00"
     }
   },
   "leads": [
     {
       "lead_id": "L-234567",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "profile": {
         "wa_id": "+201001234567",
         "name": "Hana Mostafa",
         "language": "en",
         "source": "meta_ad",
         "source_ref": "IG_RETARGETING_Q3",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "end_user",
@@ -610,21 +610,21 @@
         "consultant": "Youssef Adel",
         "last_node": "N8",
         "sessions": 2,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00",
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00",
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-876543",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "profile": {
         "wa_id": "+201009876543",
         "name": "Omar Zaki",
         "language": "en",
         "source": "meta_ad",
         "source_ref": "FB_LEADGEN_INVEST_Q3",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "investor",
@@ -689,21 +689,21 @@
         "consultant": "Youssef Adel",
         "last_node": "N8",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00",
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00",
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-223344",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "profile": {
         "wa_id": "+201112223344",
         "name": "Ahmed Sobhy",
         "language": "en",
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_OCTOBER_Q3",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "end_user",
@@ -764,20 +764,20 @@
         "consultant": "",
         "last_node": "N8",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-334455",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "profile": {
         "wa_id": "+201223334455",
         "name": "Sara Nabil",
         "language": "en",
         "source": "website",
         "source_ref": "WEBSITE_CHAT",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "end_user",
@@ -838,21 +838,21 @@
         "consultant": "Nour Ibrahim",
         "last_node": "N8",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00",
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00",
+      "updated_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-778899",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "profile": {
         "wa_id": "+201667778899",
         "name": "Nada Kamal",
         "language": "en",
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_NORTHCOAST_Q3",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "end_user",
@@ -907,20 +907,20 @@
         "consultant": "",
         "last_node": "N8",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-889900",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "profile": {
         "wa_id": "+201778889900",
         "name": "Karim Elwy",
         "language": "en",
         "source": "qr",
         "source_ref": "QR_BILLBOARD_RING_ROAD",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "",
@@ -952,20 +952,20 @@
         "consultant": "Karim Saleh",
         "last_node": "N11_HUMAN",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "L-001122",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "profile": {
         "wa_id": "+201990001122",
         "name": "Yara Selim",
         "language": "en",
         "source": "meta_ad",
         "source_ref": "FB_LEADGEN_ZAYED_Q3",
-        "entry_at": "2026-08-30T12:36:58+00:00",
+        "entry_at": "2026-08-30T14:39:54+00:00",
         "consent": true,
         "opted_out": false,
         "buyer_type": "end_user",
@@ -1026,1246 +1026,1246 @@
         "consultant": "Mariam Fahmy",
         "last_node": "N8",
         "sessions": 1,
-        "updated_at": "2026-08-30T12:36:58+00:00"
+        "updated_at": "2026-08-30T14:39:54+00:00"
       },
-      "created_at": "2026-08-30T12:36:58+00:00",
-      "updated_at": "2026-08-30T12:36:58+00:00"
+      "created_at": "2026-08-30T14:39:54+00:00",
+      "updated_at": "2026-08-30T14:39:54+00:00"
     }
   ],
   "transcripts": {
-    "C-0c72a80c": [
+    "C-9aef61a1": [
       {
         "role": "bot",
         "text": "Hi Hana! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Yes, let's go",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Buy to live in",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "New Cairo",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Apartment",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many bedrooms?\n[1] [2] [3] [4+]",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "3 bedrooms",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Primary",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Off-plan",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "7-12M",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Installments",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great - our plans start around 10% down over up to 8 years. What down payment feels comfortable?\n[10%] [15%] [20%+] [Not sure]",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "15%",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How would you like to structure the installments?\n[Monthly] [Quarterly]",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Quarterly",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And equal installments, or backloaded (smaller now, larger later)?\n[Equal] [Backloaded]",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Backloaded",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "ASAP",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Palm Ridge · 3-bed apartment | 165 m² · New Cairo · primary | 9.2M EGP | 10% down, ~144K/qtr (quarterly, backloaded) | delivery 2027\n- Palm Ridge · 3-bed apartment | 186 m² · New Cairo · primary | 11.4M EGP | 10% down, ~51K/mo (monthly, equal) | delivery 2028\n- Cedar Walk · 4-bed apartment | 205 m² · New Cairo · primary | 13.2M EGP | 10% down, ~59K/mo (monthly, backloaded) | delivery 2028\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- Cedar Walk · 3-bed apartment | 158 m² · New Cairo · resale | 8.4M EGP | Cash / resale - full payment | ready to move",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "For about 34K EGP/month more you could move up to a 4-bed duplex (240 m²) at Palm Ridge - want to see it?\n[Yes, show me] [No thanks]",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Yes, show me",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Here it is:\n- Palm Ridge · 4-bed duplex | 240 m² · New Cairo · primary | 14.8M EGP | 15% down, ~246K/qtr (quarterly, backloaded) | delivery 2028",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Book a viewing",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "You're now with Mariam Fahmy, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?",
         "node": "N9",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-c37dcea0": [
+    "C-9fd77987": [
       {
         "role": "bot",
         "text": "Hi Omar! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "I want to invest",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Smart - are you after...\n[Capital appreciation] [Rental yield] [Both]",
         "node": "N2I",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "rental yield",
         "node": "N2I",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many units are you considering?\n[1] [2-3] [Portfolio / 4+]",
         "node": "N2I_UNITS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "2-3",
         "node": "N2I_UNITS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "4-7M",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "cash",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "1-3 months",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "One more worth a look - Azure Bay offers a higher-tier unit at 9.2% gross yield with off-plan launch pricing. Want to see it?\n[Yes, show me] [No thanks]",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes, show me",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Here it is:\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "talk to a consultant",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?",
         "node": "N9",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-b90b85d7": [
+    "C-0428fc94": [
       {
         "role": "bot",
         "text": "Hi Ahmed! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "buy to live in",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "6th October",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "apartment",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many bedrooms?\n[1] [2] [3] [4+]",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "3",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "primary",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "either",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "4-7M",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "installments",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great - our plans start around 10% down over up to 8 years. What down payment feels comfortable?\n[10%] [15%] [20%+] [Not sure]",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "10%",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How would you like to structure the installments?\n[Monthly] [Quarterly]",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "monthly",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And equal installments, or backloaded (smaller now, larger later)?\n[Equal] [Backloaded]",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "equal",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "3-6 months",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "no thanks",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Sorry - I didn't catch that. Pick one of these and we'll keep moving:\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N11",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "get full brochure",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "I'll keep an eye out and send you anything new that fits. Reply STOP any time to opt out.",
         "node": "N10",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-7750a342": [
+    "C-aaec07c1": [
       {
         "role": "bot",
         "text": "Hi Sara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "sure",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "it's for me and my family",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "somewhere near the coast",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "chalet",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many bedrooms?\n[1] [2] [3] [4+]",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "2 bedrooms",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "resale is fine",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "ready to move",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "around 6 million",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "cash",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "this month",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "book a viewing",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "You're now with Nour Ibrahim, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?",
         "node": "N9",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-e679612b": [
+    "C-ac165733": [
       {
         "role": "bot",
         "text": "Hi Dalia! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "I'm just browsing",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "No problem - here are three projects buyers are moving on this month:\n- Azure Bay · 4-bed villa | 330 m² · North Coast · primary | 26.5M EGP | 15% down, ~430K/qtr (quarterly, backloaded) | delivery 2029\n- Olive Quarter · 5-bed villa | 450 m² · Sheikh Zayed · primary | 34.0M EGP | 15% down, ~560K/qtr (quarterly, backloaded) | delivery 2029\n- Cedar Walk · 5-bed villa | 420 m² · New Cairo · primary | 31.0M EGP | 15% down, ~520K/qtr (quarterly, backloaded) | delivery 2029",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Want me to save your preferences so I can alert you when something fits?\n[Yes, save them] [No thanks]",
         "node": "N_BROWSE_SAVE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Yes, save them",
         "node": "N_BROWSE_SAVE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "I'll keep an eye out and send you anything new that fits. Reply STOP any time to opt out.",
         "node": "N10",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-8e281808": [
+    "C-0d9baa8f": [
       {
         "role": "bot",
         "text": "Hi Nada! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "buy to live in",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "North Coast",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "villa",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many bedrooms?\n[1] [2] [3] [4+]",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "4+",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "resale",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "ready to move",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "under 4M",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "installments",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great - our plans start around 10% down over up to 8 years. What down payment feels comfortable?\n[10%] [15%] [20%+] [Not sure]",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "10%",
         "node": "N3_DOWN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How would you like to structure the installments?\n[Monthly] [Quarterly]",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "monthly",
         "node": "N3_FREQUENCY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And equal installments, or backloaded (smaller now, larger later)?\n[Equal] [Backloaded]",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "equal",
         "node": "N3_STRUCTURE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "just exploring",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "I don't have an exact fit right now - want me to widen the budget or area, or alert you the moment something matches?\n[Widen the search] [Alert me]",
         "node": "N6_NOMATCH",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "widen the search",
         "node": "N6_NOMATCH",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Done - I've saved your criteria and I'll message you the moment a matching unit is released.",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "get full brochure",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "I'll keep an eye out and send you anything new that fits. Reply STOP any time to opt out.",
         "node": "N10",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-5f441692": [
+    "C-0958ec7a": [
       {
         "role": "bot",
         "text": "Hi Karim! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "hmm",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Sorry - I didn't catch that. Pick one of these and we'll keep moving:\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N11",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "not sure what you mean",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "I want to get this right - would you rather carry on with me, or have one of our consultants call you?\n[Talk to a consultant] [Keep going here]",
         "node": "N11_HUMAN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "talk to a consultant",
         "node": "N11_HUMAN",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "You're now with Karim Saleh, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?",
         "node": "N9",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-2e94415b": [
+    "C-7b88907d": [
       {
         "role": "bot",
         "text": "Hi Mahmoud! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "I'm a broker",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Welcome! Brokers get their own self-serve view - I'm handing you to our Broker Bot for live inventory, availability and commission terms.",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-5284ba55": [
+    "C-f04ff810": [
       {
         "role": "bot",
         "text": "Hi Yara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "yes",
         "node": "N0",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "buy to live in",
         "node": "N1",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Sheikh Zayed",
         "node": "N2",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "townhouse",
         "node": "N2_TYPE",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "How many bedrooms?\n[1] [2] [3] [4+]",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "4+",
         "node": "N2_BEDS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "both",
         "node": "N2_STATUS",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "either",
         "node": "N2_DELIVERY",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "12-20M",
         "node": "N3",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Would you pay cash or in installments?\n[Cash] [Installments]",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "cash",
         "node": "N3_PAYMENT",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "asap",
         "node": "N4",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Olive Quarter · 4-bed townhouse | 270 m² · Sheikh Zayed · resale | 16.9M EGP | Cash / resale - full payment | ready to move\n- West Gate Park · 3-bed apartment | 172 m² · Sheikh Zayed · primary | 9.8M EGP | 10% down, ~47K/mo (monthly, backloaded) | delivery 2027\n- Olive Quarter · 4-bed twinhouse | 310 m² · Sheikh Zayed · primary | 21.5M EGP | 15% down, ~352K/qtr (quarterly, backloaded) | delivery 2028\n- West Gate Park · 3-bed apartment | 160 m² · Sheikh Zayed · resale | 8.2M EGP | Cash / resale - full payment | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "express interest",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Our team is offline right now, but Mariam Fahmy has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?",
         "node": "N11",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ],
-    "C-33f2a43d": [
+    "C-ab869f55": [
       {
         "role": "bot",
         "text": "Welcome back, Hana! Last time you were looking at 3-bed apartment in New Cairo around 7-12M. Want to pick up there, or start fresh?\n[Pick up] [Start fresh]",
         "node": "N0_5",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "Pick up",
         "node": "N0_5",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Based on what you told me, here are your best matches - swipe through:\n- Palm Ridge · 3-bed apartment | 165 m² · New Cairo · primary | 9.2M EGP | 10% down, ~144K/qtr (quarterly, backloaded) | delivery 2027\n- Palm Ridge · 3-bed apartment | 186 m² · New Cairo · primary | 11.4M EGP | 10% down, ~51K/mo (monthly, equal) | delivery 2028\n- Cedar Walk · 4-bed apartment | 205 m² · New Cairo · primary | 13.2M EGP | 10% down, ~59K/mo (monthly, backloaded) | delivery 2028\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- Cedar Walk · 3-bed apartment | 158 m² · New Cairo · resale | 8.4M EGP | Cash / resale - full payment | ready to move",
         "node": "N6",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "For about 34K EGP/month more you could move up to a 4-bed duplex (240 m²) at Palm Ridge - want to see it?\n[Yes, show me] [No thanks]",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "no thanks",
         "node": "N7",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "buyer",
         "text": "express interest",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "Perfect - I've saved your preferences and shared them with our team.",
         "node": "N8",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       },
       {
         "role": "bot",
         "text": "You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?",
         "node": "N9",
-        "at": "2026-08-30T12:36:58+00:00"
+        "at": "2026-08-30T14:39:54+00:00"
       }
     ]
   },
   "events": [
     {
       "event": "conversation_started",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_NEWCAIRO_Q3",
@@ -2275,16 +2275,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 8,
         "band": "hot",
@@ -2293,9 +2293,9 @@
     },
     {
       "event": "recommended",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "NC-APT-301",
@@ -2310,18 +2310,18 @@
     },
     {
       "event": "upsell_accepted",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_id": "NC-DUP-044"
       }
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-234567",
         "intent": "viewing",
@@ -2332,9 +2332,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-0c72a80c",
+      "conversation_id": "C-9aef61a1",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Mariam Fahmy",
         "team": "New Cairo pod A",
@@ -2344,9 +2344,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "FB_LEADGEN_INVEST_Q3",
@@ -2356,16 +2356,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 8,
         "band": "hot",
@@ -2374,9 +2374,9 @@
     },
     {
       "event": "recommended",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "OC-CHL-330",
@@ -2391,18 +2391,18 @@
     },
     {
       "event": "upsell_accepted",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_id": "OC-CHL-501"
       }
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-876543",
         "intent": "consultant",
@@ -2413,9 +2413,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-c37dcea0",
+      "conversation_id": "C-9fd77987",
       "wa_id": "+201009876543",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Youssef Adel",
         "team": "New Cairo pod B",
@@ -2425,9 +2425,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_OCTOBER_Q3",
@@ -2437,16 +2437,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 5,
         "band": "warm",
@@ -2455,9 +2455,9 @@
     },
     {
       "event": "recommended",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "OO-APT-410",
@@ -2471,9 +2471,9 @@
     },
     {
       "event": "low_confidence",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "node": "N8",
         "text": "no thanks",
@@ -2482,9 +2482,9 @@
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-223344",
         "intent": "brochure",
@@ -2495,9 +2495,9 @@
     },
     {
       "event": "nurture_scheduled",
-      "conversation_id": "C-b90b85d7",
+      "conversation_id": "C-0428fc94",
       "wa_id": "+201112223344",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "band": "warm",
         "followups": [
@@ -2508,9 +2508,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "website",
         "source_ref": "WEBSITE_CHAT",
@@ -2520,16 +2520,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 8,
         "band": "hot",
@@ -2538,9 +2538,9 @@
     },
     {
       "event": "recommended",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "OC-CHL-330",
@@ -2554,9 +2554,9 @@
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-334455",
         "intent": "viewing",
@@ -2567,9 +2567,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-7750a342",
+      "conversation_id": "C-aaec07c1",
       "wa_id": "+201223334455",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Nour Ibrahim",
         "team": "West Cairo pod",
@@ -2579,9 +2579,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-e679612b",
+      "conversation_id": "C-ac165733",
       "wa_id": "+201556667788",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_BRAND_Q3",
@@ -2591,16 +2591,16 @@
     },
     {
       "event": "browsing_exit",
-      "conversation_id": "C-e679612b",
+      "conversation_id": "C-ac165733",
       "wa_id": "+201556667788",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "nurture_scheduled",
-      "conversation_id": "C-e679612b",
+      "conversation_id": "C-ac165733",
       "wa_id": "+201556667788",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "band": "cold",
         "followups": [
@@ -2611,9 +2611,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_NORTHCOAST_Q3",
@@ -2623,16 +2623,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 2,
         "band": "cold",
@@ -2641,16 +2641,16 @@
     },
     {
       "event": "alert_registered",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-778899",
         "intent": "brochure",
@@ -2661,9 +2661,9 @@
     },
     {
       "event": "nurture_scheduled",
-      "conversation_id": "C-8e281808",
+      "conversation_id": "C-0d9baa8f",
       "wa_id": "+201667778899",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "band": "cold",
         "followups": [
@@ -2674,9 +2674,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "wa_id": "+201778889900",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "qr",
         "source_ref": "QR_BILLBOARD_RING_ROAD",
@@ -2686,16 +2686,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "wa_id": "+201778889900",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "low_confidence",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "wa_id": "+201778889900",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "node": "N1",
         "text": "hmm",
@@ -2704,9 +2704,9 @@
     },
     {
       "event": "low_confidence",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "wa_id": "+201778889900",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "node": "N1",
         "text": "not sure what you mean",
@@ -2715,9 +2715,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-5f441692",
+      "conversation_id": "C-0958ec7a",
       "wa_id": "+201778889900",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Karim Saleh",
         "team": "Coast pod",
@@ -2727,9 +2727,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-2e94415b",
+      "conversation_id": "C-7b88907d",
       "wa_id": "+201889990011",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_LEADGEN_BRAND_Q3",
@@ -2739,23 +2739,23 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-2e94415b",
+      "conversation_id": "C-7b88907d",
       "wa_id": "+201889990011",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "routed_broker_bot",
-      "conversation_id": "C-2e94415b",
+      "conversation_id": "C-7b88907d",
       "wa_id": "+201889990011",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "FB_LEADGEN_ZAYED_Q3",
@@ -2765,16 +2765,16 @@
     },
     {
       "event": "opt_in",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "qualified",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "score": 8,
         "band": "hot",
@@ -2783,9 +2783,9 @@
     },
     {
       "event": "recommended",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "SZ-TWN-031",
@@ -2799,9 +2799,9 @@
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-001122",
         "intent": "reserve",
@@ -2812,9 +2812,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-5284ba55",
+      "conversation_id": "C-f04ff810",
       "wa_id": "+201990001122",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Mariam Fahmy",
         "team": "New Cairo pod A",
@@ -2824,9 +2824,9 @@
     },
     {
       "event": "conversation_started",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "source": "meta_ad",
         "source_ref": "IG_RETARGETING_Q3",
@@ -2836,16 +2836,16 @@
     },
     {
       "event": "resumed_profile",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {}
     },
     {
       "event": "recommended",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "unit_ids": [
           "NC-APT-301",
@@ -2859,9 +2859,9 @@
     },
     {
       "event": "lead_written",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "lead_id": "L-234567",
         "intent": "reserve",
@@ -2872,9 +2872,9 @@
     },
     {
       "event": "handoff",
-      "conversation_id": "C-33f2a43d",
+      "conversation_id": "C-ab869f55",
       "wa_id": "+201001234567",
-      "at": "2026-08-30T12:36:58+00:00",
+      "at": "2026-08-30T14:39:54+00:00",
       "payload": {
         "consultant": "Youssef Adel",
         "team": "New Cairo pod B",
@@ -2888,2211 +2888,2213 @@
       "lead_id": "P-0000",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0001",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0002",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0003",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0004",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0005",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0006",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0007",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0008",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0009",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0010",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0011",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0012",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0013",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0014",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0015",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0016",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0017",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0018",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0019",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0020",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0021",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0022",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0023",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0024",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0025",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0026",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0027",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0028",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0029",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0030",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0031",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0032",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0033",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0034",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0035",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0036",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0037",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0038",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0039",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0040",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0041",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0042",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0043",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0044",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0045",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0046",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0047",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0048",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0049",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0050",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0051",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0052",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0053",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0054",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0055",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0056",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0057",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0058",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0059",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0060",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0061",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0062",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0063",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0064",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0065",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0066",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0067",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0068",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0069",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0070",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0071",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0072",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0073",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0074",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0075",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0076",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0077",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0078",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0079",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0080",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0081",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0082",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0083",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0084",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0085",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0086",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0087",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0088",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0089",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0090",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0091",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0092",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0093",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0094",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0095",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:54+00:00"
     },
     {
       "lead_id": "P-0096",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0097",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0098",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0099",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0100",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0101",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0102",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0103",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0104",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0105",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0106",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0107",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0108",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0109",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0110",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0111",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0112",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0113",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0114",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0115",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0116",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0117",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0118",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0119",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0120",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0121",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0122",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0123",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0124",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0125",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0126",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0127",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0128",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0129",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0130",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0131",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0132",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0133",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0134",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0135",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0136",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0137",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0138",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0139",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0140",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0141",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0142",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0143",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0144",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0145",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0146",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0147",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0148",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0149",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0150",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0151",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0152",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0153",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0154",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0155",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0156",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0157",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0158",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0159",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0160",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0161",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0162",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0163",
       "cohort": "profiled",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0164",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0165",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0166",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0167",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0168",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0169",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0170",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0171",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0172",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0173",
       "cohort": "profiled",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0174",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0175",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0176",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0177",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0178",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "P-0179",
       "cohort": "profiled",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0000",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0001",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0002",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0003",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0004",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0005",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0006",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0007",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0008",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0009",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0010",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0011",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0012",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0013",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0014",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0015",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0016",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0017",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0018",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0019",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0020",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0021",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0022",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0023",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0024",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0025",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0026",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0027",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0028",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0029",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:58+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0030",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0031",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0032",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0033",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0034",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0035",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0036",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0037",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0038",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0039",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0040",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0041",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0042",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0043",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0044",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0045",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0046",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0047",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0048",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0049",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0050",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0051",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0052",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0053",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0054",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0055",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0056",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0057",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0058",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0059",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0060",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0061",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0062",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0063",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0064",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0065",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0066",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0067",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0068",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0069",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0070",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0071",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0072",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0073",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0074",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0075",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0076",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0077",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0078",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0079",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0080",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0081",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0082",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0083",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0084",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0085",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0086",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0087",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0088",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0089",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0090",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0091",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0092",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0093",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0094",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0095",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0096",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0097",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0098",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0099",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0100",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0101",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0102",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0103",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0104",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0105",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0106",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0107",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0108",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0109",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0110",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0111",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0112",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0113",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0114",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0115",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0116",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0117",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0118",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0119",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0120",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0121",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0122",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0123",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0124",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0125",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0126",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0127",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0128",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0129",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0130",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0131",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0132",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0133",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0134",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0135",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0136",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0137",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0138",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0139",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0140",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0141",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0142",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0143",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0144",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0145",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0146",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0147",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0148",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0149",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0150",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0151",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0152",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0153",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0154",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0155",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0156",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0157",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0158",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0159",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0160",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0161",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0162",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0163",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0164",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0165",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0166",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0167",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0168",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0169",
       "cohort": "control",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0170",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0171",
       "cohort": "control",
       "stage": "reserved",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0172",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0173",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0174",
       "cohort": "control",
       "stage": "lead",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0175",
       "cohort": "control",
       "stage": "closed",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0176",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0177",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0178",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "C-0179",
       "cohort": "control",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00"
+      "at": "2026-08-30T14:39:55+00:00"
     },
     {
       "lead_id": "L-234567",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-876543",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-223344",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-334455",
       "cohort": "profiled",
       "stage": "viewing",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-778899",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-889900",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     },
     {
       "lead_id": "L-001122",
       "cohort": "profiled",
       "stage": "contacted",
-      "at": "2026-08-30T12:36:59+00:00",
+      "at": "2026-08-30T14:39:55+00:00",
       "real": true
     }
   ],
+  "sessions": {},
+  "processed_messages": {},
   "rotation_index": 2
 }

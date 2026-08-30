@@ -94,6 +94,50 @@ class Engine:
             cohort=cohort,
         )
 
+    # -- persistence --------------------------------------------------------
+
+    def state_dict(self) -> dict[str, Any]:
+        """Everything needed to resume this conversation after a restart."""
+        return {
+            "conversation_id": self.conversation_id,
+            "wa_id": self.profile.wa_id,
+            "awaiting": self.awaiting,
+            "low_confidence_turns": self.low_confidence_turns,
+            "ended": self.ended,
+            "cohort": self.cohort,
+            "upsell_unit_id": self.upsell[0].unit_id if self.upsell else "",
+            "upsell_reason": self.upsell[1] if self.upsell else "",
+        }
+
+    @classmethod
+    def restore(
+        cls, crm: CRM, state: dict[str, Any], units: Optional[list[Unit]] = None
+    ) -> Optional["Engine"]:
+        """Rebuild an engine from saved state. The profile is the source of
+        truth; only turn-level state lives in the session record."""
+        profile = crm.get_profile(state.get("wa_id", ""))
+        if not profile:
+            return None
+        units = units if units is not None else inv.load_units()
+        engine = cls(
+            crm=crm,
+            profile=profile,
+            units=units,
+            conversation_id=state.get("conversation_id", f"C-{uuid.uuid4().hex[:8]}"),
+            cohort=state.get("cohort", "profiled"),
+            awaiting=state.get("awaiting"),
+            low_confidence_turns=state.get("low_confidence_turns", 0),
+            ended=state.get("ended", False),
+        )
+        by_id = {unit.unit_id: unit for unit in units}
+        engine.shortlist = [
+            (by_id[uid], 1.0) for uid in profile.shortlisted_unit_ids if uid in by_id
+        ]
+        upsell_id = state.get("upsell_unit_id")
+        if upsell_id and upsell_id in by_id:
+            engine.upsell = (by_id[upsell_id], state.get("upsell_reason", ""))
+        return engine
+
     # -- public API ---------------------------------------------------------
 
     def start(self) -> list[Message]:
@@ -106,6 +150,17 @@ class Engine:
         )
         first = "N0_5" if self.profile.is_known else "N0"
         return self._advance(first)
+
+    def can_answer(self, text: str) -> bool:
+        """Does this text actually answer the question on the table?
+
+        An opening "hi" is a greeting, not an answer - feeding it to the flow
+        would greet the buyer and immediately tell them it didn't understand.
+        """
+        if self.ended or not self.awaiting:
+            return False
+        value, confidence = self._interpret(ASKS[self.awaiting], text)
+        return value is not None and confidence >= 0.5
 
     def handle(self, text: str) -> list[Message]:
         """Feed one buyer message into the flow."""

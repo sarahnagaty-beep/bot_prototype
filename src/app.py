@@ -15,12 +15,22 @@ Endpoints
 
 from __future__ import annotations
 
+import hashlib
+import hmac
+import logging
 import os
 from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse
+
+try:  # optional: makes a local .env work without exporting by hand
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:  # pragma: no cover - dotenv is a convenience, not a requirement
+    pass
 
 from . import metrics
 from .brief import build_brief
@@ -31,9 +41,11 @@ from .dashboard_build import wrap
 from .whatsapp import WhatsAppClient, inbound_text
 
 VERIFY_TOKEN = os.environ.get("WHATSAPP_VERIFY_TOKEN", "buyer-bot-prototype")
+APP_SECRET = os.environ.get("WHATSAPP_APP_SECRET", "")
 DASHBOARD = Path(__file__).resolve().parent.parent / "dashboard" / "index.html"
 
-app = FastAPI(title="Buyer Bot Prototype", version="0.2.0")
+log = logging.getLogger("buyer-bot")
+app = FastAPI(title="Buyer Bot Prototype", version="0.3.0")
 crm = CRM()
 units = load_units()
 client = WhatsAppClient()
@@ -50,6 +62,18 @@ def dashboard() -> HTMLResponse:
         raise HTTPException(404, "dashboard/index.html not found")
     # The file is an artifact-style fragment; serving needs a real document.
     return HTMLResponse(wrap(DASHBOARD.read_text()))
+
+
+@app.get("/health")
+def health() -> JSONResponse:
+    """Readiness probe: is the bot wired up, and is it really sending?"""
+    return JSONResponse({
+        "status": "ok",
+        "whatsapp": "live" if client.live else "dry-run",
+        "signature_check": bool(APP_SECRET),
+        "inventory_units": len(units),
+        "leads": len(crm.leads()),
+    })
 
 
 @app.get("/api/snapshot")
@@ -115,8 +139,27 @@ def verify(request: Request) -> PlainTextResponse:
     raise HTTPException(403, "verification failed")
 
 
+def verify_signature(body: bytes, header: str) -> bool:
+    """Meta signs every webhook with the app secret (X-Hub-Signature-256).
+
+    Without APP_SECRET set the check is skipped, which is fine locally but must
+    not be how the UAT host runs - anyone could post fake leads at it.
+    """
+    if not APP_SECRET:
+        return True
+    if not header or not header.startswith("sha256="):
+        return False
+    expected = hmac.new(APP_SECRET.encode(), body, hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, header[len("sha256="):])
+
+
 @app.post("/webhook")
 async def receive(request: Request) -> JSONResponse:
+    body = await request.body()
+    if not verify_signature(body, request.headers.get("x-hub-signature-256", "")):
+        log.warning("rejected webhook with a bad signature")
+        raise HTTPException(403, "bad signature")
+
     payload = await request.json()
     handled = []
     for entry in payload.get("entry", []):
@@ -124,41 +167,71 @@ async def receive(request: Request) -> JSONResponse:
             message = inbound_text(change.get("value", {}))
             if not message:
                 continue
+            if crm.seen_message(message.get("message_id", "")):
+                handled.append({"wa_id": message["wa_id"], "skipped": "duplicate"})
+                continue
             handled.append(_handle(message))
+    # Always 200 once the payload is understood; a non-200 makes Meta retry.
     return JSONResponse({"status": "ok", "handled": handled})
+
+
+def _session_for(message: dict[str, Any]) -> tuple[Engine, bool]:
+    """The buyer's live conversation, resumed across restarts. Returns
+    (engine, is_new)."""
+    wa_id = message["wa_id"]
+
+    engine = sessions.get(wa_id)
+    if engine is None:
+        state = crm.load_session(wa_id)
+        if state and not state.get("ended"):
+            engine = Engine.restore(crm, state, units)
+    if engine is not None and not engine.ended:
+        sessions[wa_id] = engine
+        return engine, False
+
+    engine = Engine.for_buyer(
+        crm,
+        wa_id=wa_id,
+        name=message.get("name", ""),
+        source=message.get("source", "direct"),
+        source_ref=message.get("source_ref", ""),
+        units=units,
+    )
+    sessions[wa_id] = engine
+    return engine, True
 
 
 def _handle(message: dict[str, Any]) -> dict[str, Any]:
     """One inbound message -> engine turn -> outbound sends."""
     wa_id = message["wa_id"]
-    engine = sessions.get(wa_id)
+    engine, is_new = _session_for(message)
 
-    if engine is None or engine.ended:
-        engine = Engine.for_buyer(
-            crm,
-            wa_id=wa_id,
-            name=message.get("name", ""),
-            source=message.get("source", "direct"),
-            source_ref=message.get("source_ref", ""),
-            units=units,
-        )
-        sessions[wa_id] = engine
+    if is_new:
         outbound = engine.start()
-        # The buyer's first message also answers the greeting when it is a
-        # button reply from the ad's click-to-chat.
-        if message.get("text"):
-            outbound = outbound + engine.handle(message["text"])
+        # The opening message answers the greeting only when it really is an
+        # answer - a click-to-chat button payload, or "yes". A plain "hi" is
+        # left alone so the buyer isn't greeted and corrected in one breath.
+        text = message.get("text", "")
+        if text and engine.can_answer(text):
+            outbound = outbound + engine.handle(text)
     else:
         outbound = engine.handle(message["text"])
 
     for msg in outbound:
-        client.send(msg, wa_id)
+        try:
+            client.send(msg, wa_id)
+        except Exception:  # a failed send must not lose the buyer's place
+            log.exception("send failed for %s at node %s", wa_id, engine.awaiting)
+
+    crm.save_session(wa_id, engine.state_dict())
     if engine.ended:
         sessions.pop(wa_id, None)
+        crm.clear_session(wa_id)
 
     return {
         "wa_id": wa_id,
         "conversation_id": engine.conversation_id,
         "messages_sent": len(outbound),
         "band": engine.profile.band,
+        "awaiting": engine.awaiting,
     }

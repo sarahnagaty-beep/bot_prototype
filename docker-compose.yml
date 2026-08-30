@@ -1,0 +1,11 @@
+services:
+  buyer-bot:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # Leads, transcripts and sessions survive a restart during UAT.
+      - ./data:/app/data
+    restart: unless-stopped

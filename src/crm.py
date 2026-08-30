@@ -44,6 +44,8 @@ class CRM:
             "transcripts": {},
             "events": [],
             "outcomes": [],
+            "sessions": {},
+            "processed_messages": {},
             "rotation_index": 0,
         }
         self.load()
@@ -69,6 +71,8 @@ class CRM:
             "transcripts": {},
             "events": [],
             "outcomes": [],
+            "sessions": {},
+            "processed_messages": {},
             "rotation_index": 0,
         }
         self.save()
@@ -178,3 +182,51 @@ class CRM:
 
     def outcomes(self) -> list[dict[str, Any]]:
         return list(self._data.get("outcomes", []))
+
+    # -- live conversation state -------------------------------------------
+
+    def save_session(self, wa_id: str, state: dict[str, Any]) -> None:
+        """Persist where a buyer is in the flow.
+
+        Without this a restart (or a second web worker) drops every buyer
+        mid-conversation and starts them over - the exact failure UAT testers
+        would report as "the bot forgot me".
+        """
+        self._data.setdefault("sessions", {})[wa_id] = {**state, "updated_at": _now()}
+        self.save()
+
+    def load_session(self, wa_id: str, max_age_hours: int = 24) -> Optional[dict[str, Any]]:
+        state = self._data.get("sessions", {}).get(wa_id)
+        if not state:
+            return None
+        updated = datetime.fromisoformat(state.get("updated_at", _now()))
+        age = (datetime.now(timezone.utc) - updated).total_seconds() / 3600
+        if age > max_age_hours:
+            # Past WhatsApp's 24-hour service window this is a new conversation.
+            self.clear_session(wa_id)
+            return None
+        return state
+
+    def clear_session(self, wa_id: str) -> None:
+        if self._data.get("sessions", {}).pop(wa_id, None) is not None:
+            self.save()
+
+    # -- webhook de-duplication --------------------------------------------
+
+    def seen_message(self, message_id: str, keep: int = 500) -> bool:
+        """True if this Cloud API message id was already handled.
+
+        Meta retries a webhook until it gets a 200, so without this a slow turn
+        is replayed and the buyer is answered twice.
+        """
+        if not message_id:
+            return False
+        seen = self._data.setdefault("processed_messages", {})
+        if message_id in seen:
+            return True
+        seen[message_id] = _now()
+        if len(seen) > keep:
+            for old in sorted(seen, key=seen.get)[: len(seen) - keep]:
+                seen.pop(old, None)
+        self.save()
+        return False

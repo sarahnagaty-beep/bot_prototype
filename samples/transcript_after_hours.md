@@ -1,6 +1,6 @@
 # After hours · handoff promises a morning call
 
-`C-5284ba55` · buyer `+201990001122` · source `meta_ad` · band **hot** (score 8)
+`C-f04ff810` · buyer `+201990001122` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Yara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  

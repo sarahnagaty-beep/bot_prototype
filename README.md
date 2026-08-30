@@ -99,19 +99,31 @@ The product's actual output. `python main.py brief L-234567`:
 The dashboard reads `/api/snapshot` when the service is running and falls back to a data
 snapshot embedded in the file, so `dashboard/index.html` also opens straight from disk.
 
-## Connecting it to real WhatsApp
+## Running UAT
 
-Nothing in the flow changes — only the adapter:
+**[docs/UAT.md](docs/UAT.md) is the runbook** — Meta prerequisites, deployment, and 13
+test cases with expected results. The short version:
+
+*Internal UAT, no Meta account needed:* clone, `pip install -r requirements.txt`,
+`python main.py demo`, `python main.py serve`. Testers use `python main.py chat` and read
+the briefs in the dashboard.
+
+*WhatsApp UAT:* nothing in the flow changes — only the adapter and where it runs.
 
 ```bash
-export WHATSAPP_TOKEN=...            # Cloud API access token
-export WHATSAPP_PHONE_NUMBER_ID=...  # sender
-export WHATSAPP_VERIFY_TOKEN=...     # must match the Meta webhook config
-python main.py serve --host 0.0.0.0
+cp .env.example .env        # WHATSAPP_TOKEN, PHONE_NUMBER_ID, VERIFY_TOKEN, APP_SECRET
+docker compose up -d --build
+python scripts/smoke.py https://<your-host>   # drives a whole buyer through the webhook
 ```
 
-Point the Meta webhook at `POST /webhook`. With no token set, `WhatsAppClient` prints the
-payloads it would send instead of sending them — which is how the demo runs offline.
+Point the Meta webhook at `POST /webhook` with your verify token and subscribe to
+`messages`. A Cloud API **test number** is enough for UAT — no business verification or
+template approval needed until real ad traffic. With no token set, `WhatsAppClient` prints
+the payloads it would send instead of sending them, which is how the demo runs offline.
+
+Set `WHATSAPP_APP_SECRET` on anything reachable from the internet: it turns on
+`X-Hub-Signature-256` verification, without which anyone can post fake leads at the
+webhook. `GET /health` reports whether it is on.
 
 ## What is real and what is stubbed
 
@@ -145,5 +157,5 @@ the dashboard.
 ## Tests
 
 ```bash
-python -m pytest tests/ -q      # 36 tests: scoring, matching, the flow, adapter, API
+python -m pytest tests/ -q      # 43 tests: scoring, matching, the flow, adapter, API
 ```
