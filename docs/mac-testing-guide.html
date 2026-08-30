@@ -1,0 +1,518 @@
+<title>Buyer Bot on Your Mac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #edeff0;
+    --surface: #fbfcfc;
+    --surface-2: #f3f5f6;
+    --line: #dbe0e3;
+    --line-strong: #c2cad0;
+    --ink: #12181d;
+    --ink-2: #4b5761;
+    --ink-3: #74818b;
+    --accent: #1b5aa8;
+    --accent-soft: #e7eff9;
+    --caution: #8a5d05;
+    --caution-soft: #faf1dd;
+    --term-bg: #15191c;
+    --term-ink: #e3e9ec;
+    --term-dim: #8d9aa3;
+    --term-prompt: #6fc59a;
+    --shadow: 0 1px 2px rgba(18, 24, 29, .05), 0 10px 28px rgba(18, 24, 29, .06);
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper: #0f1315;
+      --surface: #191d20;
+      --surface-2: #21262a;
+      --line: #2c3338;
+      --line-strong: #3c454c;
+      --ink: #eef2f4;
+      --ink-2: #b0bbc2;
+      --ink-3: #8593a0;
+      --accent: #6fa8f0;
+      --accent-soft: #16283f;
+      --caution: #e0a33a;
+      --caution-soft: #2e2515;
+      --term-bg: #0b0e10;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px rgba(0, 0, 0, .35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #0f1315;
+    --surface: #191d20;
+    --surface-2: #21262a;
+    --line: #2c3338;
+    --line-strong: #3c454c;
+    --ink: #eef2f4;
+    --ink-2: #b0bbc2;
+    --ink-3: #8593a0;
+    --accent: #6fa8f0;
+    --accent-soft: #16283f;
+    --caution: #e0a33a;
+    --caution-soft: #2e2515;
+    --term-bg: #0b0e10;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 780px; margin: 0 auto; padding: 40px 22px 90px; }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+
+  h1 {
+    font-family: var(--display); font-weight: 700; font-size: clamp(30px, 5vw, 40px);
+    letter-spacing: -.025em; line-height: 1.1; margin: 10px 0 12px; text-wrap: balance;
+  }
+
+  .lede { font-size: 18px; color: var(--ink-2); margin: 0; max-width: 60ch; }
+
+  .facts {
+    display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 8px;
+    padding-top: 22px; border-top: 2px solid var(--line-strong);
+  }
+  .fact {
+    flex: 1 1 190px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 3px; padding: 12px 14px;
+  }
+  .fact b {
+    display: block; font-family: var(--display); font-size: 15px; margin-bottom: 2px;
+  }
+  .fact span { font-size: 14px; color: var(--ink-2); }
+
+  /* ---- steps ---- */
+  .step {
+    display: grid; grid-template-columns: 46px 1fr; gap: 0 18px;
+    padding: 30px 0 26px; border-bottom: 1px solid var(--line);
+  }
+  .step:last-of-type { border-bottom: 0; }
+
+  .marker {
+    grid-row: 1 / span 99;
+    font-family: var(--mono); font-size: 15px; font-weight: 500;
+    color: var(--accent); background: var(--accent-soft);
+    border-radius: 3px; width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step.done .marker { background: var(--accent); color: var(--surface); }
+
+  .step h2 {
+    font-family: var(--display); font-weight: 600; font-size: 22px;
+    letter-spacing: -.015em; margin: 6px 0 10px; text-wrap: balance;
+  }
+  .step h2 .once {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-3); margin-left: 10px;
+    vertical-align: 3px; white-space: nowrap;
+  }
+  .step p { margin: 0 0 12px; max-width: 62ch; }
+  .step ol, .step ul { margin: 0 0 12px; padding-left: 22px; max-width: 62ch; }
+  .step li { margin-bottom: 7px; }
+
+  kbd {
+    font-family: var(--mono); font-size: 12.5px; padding: 2px 7px;
+    border: 1px solid var(--line-strong); border-bottom-width: 2px;
+    border-radius: 4px; background: var(--surface); white-space: nowrap;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+
+  /* ---- terminal block ---- */
+  .term {
+    background: var(--term-bg); border-radius: 6px; overflow: hidden;
+    margin: 0 0 14px; box-shadow: var(--shadow);
+  }
+  .term-bar {
+    display: flex; align-items: center; gap: 7px;
+    padding: 9px 12px; border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+  .term-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3d454b; }
+  .term-bar .label {
+    font-family: var(--mono); font-size: 11px; color: var(--term-dim);
+    margin-left: 6px; letter-spacing: .04em;
+  }
+  .term-bar button {
+    margin-left: auto; background: transparent; color: var(--term-dim);
+    border: 1px solid rgba(255, 255, 255, .16); border-radius: 3px;
+    font-family: var(--mono); font-size: 11px; padding: 3px 9px; cursor: pointer;
+  }
+  .term-bar button:hover { color: var(--term-ink); border-color: rgba(255, 255, 255, .34); }
+  .term pre {
+    margin: 0; padding: 14px 16px; overflow-x: auto;
+    font-family: var(--mono); font-size: 14px; line-height: 1.7; color: var(--term-ink);
+  }
+  .term .prompt { color: var(--term-prompt); user-select: none; }
+  .term .comment { color: var(--term-dim); }
+
+  /* ---- checkpoints ---- */
+  .check {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 3px solid var(--accent); border-radius: 3px;
+    padding: 11px 14px; font-size: 15px; color: var(--ink-2); max-width: 62ch;
+  }
+  .check b { color: var(--ink); font-weight: 600; }
+  .check .tick { color: var(--accent); font-weight: 700; }
+
+  .aside {
+    background: var(--caution-soft); border: 1px solid var(--caution);
+    border-radius: 3px; padding: 11px 14px; font-size: 15px;
+    color: var(--ink); max-width: 62ch; margin: 0 0 12px;
+  }
+  .aside b { font-weight: 600; }
+
+  .tick-off {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); cursor: pointer;
+    user-select: none;
+  }
+  .tick-off input { width: 15px; height: 15px; accent-color: var(--accent); cursor: pointer; }
+
+  /* ---- sections ---- */
+  section.block { margin-top: 44px; }
+  section.block > h2 {
+    font-family: var(--display); font-weight: 600; font-size: 22px;
+    letter-spacing: -.015em; margin: 0 0 6px;
+  }
+  section.block > p.intro { color: var(--ink-2); margin: 0 0 18px; max-width: 62ch; }
+
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 15.5px; }
+  th {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); font-weight: 400;
+    text-align: left; padding: 0 14px 8px 0; border-bottom: 1px solid var(--line);
+  }
+  td { padding: 11px 14px 11px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:first-child { width: 40%; }
+  td code, p code, li code {
+    font-family: var(--mono); font-size: 13.5px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    border-radius: 3px; padding: 1px 5px;
+  }
+
+  .menu-list { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+  .menu-list div {
+    display: grid; grid-template-columns: 34px 1fr; gap: 12px;
+    background: var(--surface); padding: 11px 14px; font-size: 15.5px;
+  }
+  .menu-list b {
+    font-family: var(--mono); color: var(--accent); font-weight: 500;
+  }
+
+  footer {
+    margin-top: 52px; padding-top: 20px; border-top: 2px solid var(--line-strong);
+    font-size: 14.5px; color: var(--ink-3);
+  }
+
+  @media (max-width: 560px) {
+    .page { padding: 28px 16px 64px; }
+    .step { grid-template-columns: 34px 1fr; gap: 0 12px; }
+    .marker { width: 32px; height: 32px; font-size: 13px; }
+    td:first-child { width: 45%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Buyer Bot prototype · user acceptance testing</div>
+    <h1>Testing the buyer bot on your Mac</h1>
+    <p class="lede">You'll have a conversation with the bot as if you were a buyer,
+      then read the brief a consultant would receive before calling you. Written for
+      someone who has never opened Terminal.</p>
+
+    <div class="facts">
+      <div class="fact"><b>About 15 minutes</b><span>Most of it waiting for things to download</span></div>
+      <div class="fact"><b>Nothing can break</b><span>It only touches its own folder on your Desktop</span></div>
+      <div class="fact"><b>Two things to type</b><span>The rest is clicking and picking numbers</span></div>
+    </div>
+  </header>
+
+  <div class="step" id="s1">
+    <div class="marker">1</div>
+    <div>
+      <h2>Install Python <span class="once">once, ever</span></h2>
+      <p>Python is the engine the bot runs on. Installing it is a normal Mac installer —
+        the same as installing Zoom.</p>
+      <ol>
+        <li>Go to <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org/downloads</a></li>
+        <li>Click the big yellow <b>Download Python</b> button</li>
+        <li>Open the file that lands in your Downloads</li>
+        <li>Click <b>Continue → Continue → Agree → Install</b>, and enter your Mac password when asked</li>
+      </ol>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when the installer says
+          "The installation was successful."</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s1"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s2">
+    <div class="marker">2</div>
+    <div>
+      <h2>Download the bot</h2>
+      <ol>
+        <li>Open
+          <a href="https://github.com/sarahnagaty-beep/bot_prototype/tree/claude/buyer-whatsapp-ai-bot-7l201r" target="_blank" rel="noopener">the project page</a></li>
+        <li>Click the green <b>Code</b> button, then <b>Download ZIP</b></li>
+        <li>In your Downloads folder, double-click the ZIP file — it turns into a folder</li>
+        <li>Drag that folder onto your <b>Desktop</b></li>
+      </ol>
+      <p>The folder has a long name — <code>bot_prototype-claude-buyer-whatsapp-ai-bot-7l201r</code>.
+        You never have to type it.</p>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when that folder is sitting on your Desktop
+          and opens to show files like <code>README.md</code> and <code>start.command</code>.</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s2"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s3">
+    <div class="marker">3</div>
+    <div>
+      <h2>Open Terminal</h2>
+      <p>Press <kbd>⌘ Command</kbd> + <kbd>Space</kbd>, type <code>Terminal</code>,
+        press <kbd>Enter</kbd>.</p>
+      <p>A plain window opens with a blinking cursor. It works like a chat: you type
+        one line, press <kbd>Enter</kbd>, and it answers. Nothing happens until you
+        press Enter.</p>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when you see a window with your computer's
+          name and a <code>%</code> sign waiting for you.</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s3"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s4">
+    <div class="marker">4</div>
+    <div>
+      <h2>Point Terminal at the folder</h2>
+      <p>Terminal needs to know which folder to work in. Type this — <b>including the
+        space at the end</b> — but don't press Enter yet:</p>
+
+      <div class="term">
+        <div class="term-bar"><i></i><i></i><i></i><span class="label">Terminal</span>
+          <button type="button" data-copy="cd ">Copy</button></div>
+        <pre><span class="prompt">%</span> cd <span class="comment">← then drag the folder in</span></pre>
+      </div>
+
+      <p>Now <b>drag the folder from your Desktop straight into the Terminal window</b>.
+        It fills in the address for you. Now press <kbd>Enter</kbd>.</p>
+      <div class="aside"><b>Why dragging?</b> Because typing that folder name by hand is
+        how this step goes wrong. Dragging can't misspell it.</div>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when the line before the <code>%</code> now
+          ends with <code>bot_prototype…</code></span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s4"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s5">
+    <div class="marker">5</div>
+    <div>
+      <h2>Start it</h2>
+      <p>Type this and press <kbd>Enter</kbd>:</p>
+
+      <div class="term">
+        <div class="term-bar"><i></i><i></i><i></i><span class="label">Terminal</span>
+          <button type="button" data-copy="bash start.command">Copy</button></div>
+        <pre><span class="prompt">%</span> bash start.command</pre>
+      </div>
+
+      <p>The first time, this takes a minute or two and prints a lot of scrolling text.
+        That's it installing what it needs — let it run. It only does this once.</p>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when the scrolling stops and you see a menu
+          with five numbered options.</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s5"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s6">
+    <div class="marker">6</div>
+    <div>
+      <h2>Be a buyer</h2>
+      <p>Type <kbd>1</kbd> and press <kbd>Enter</kbd>. Give it your name, then answer
+        the way a real buyer would.</p>
+      <p><b>Don't stick to the options it shows you.</b> The whole point is to find out
+        where it breaks — so say "somewhere near the coast" instead of tapping North
+        Coast, or "around 8 million" instead of picking a budget band. Try Arabic and
+        see what happens; it's English-only for now, and what you type becomes the
+        input for the Arabic build.</p>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when it shows you matching units and ends by
+          naming the consultant it handed you to.</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s6"> Mark done</label>
+    </div>
+  </div>
+
+  <div class="step" id="s7">
+    <div class="marker">7</div>
+    <div>
+      <h2>See what your agent would get</h2>
+      <p>Back at the menu, type <kbd>2</kbd> and press <kbd>Enter</kbd>. Your browser
+        opens the dashboard. Find your own name in the lead queue and click the row.</p>
+      <p>That panel is the product: what the consultant reads before dialling. Judge it
+        the way a sales director would — <b>would this have made the call better?</b></p>
+      <p>When you're done looking, go back to Terminal and press
+        <kbd>Control</kbd> + <kbd>C</kbd> to stop the dashboard. That's the
+        <code>control</code> key, not <code>command</code>.</p>
+      <div class="check"><span class="tick">✓</span>
+        <span><b>You'll know it worked</b> when your conversation appears as a lead with
+          a score, a band, and the units you were shown.</span></div>
+      <label class="tick-off"><input type="checkbox" data-step="s7"> Mark done</label>
+    </div>
+  </div>
+
+  <section class="block">
+    <h2>The menu, in full</h2>
+    <p class="intro">You'll come back to this every time.</p>
+    <div class="menu-list">
+      <div><b>1</b><span>Talk to the bot as a buyer</span></div>
+      <div><b>2</b><span>Open the dashboard — leads, briefs, and the pilot numbers</span></div>
+      <div><b>3</b><span>Read a finished sample conversation, one per path the bot can take</span></div>
+      <div><b>4</b><span>Clear your test data and start fresh</span></div>
+      <div><b>5</b><span>Quit</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Stopping, and coming back tomorrow</h2>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          <tr><td>Stop the dashboard</td><td><kbd>Control</kbd> + <kbd>C</kbd></td></tr>
+          <tr><td>Leave properly</td><td>Choose <b>5</b>, then close the Terminal window</td></tr>
+          <tr><td>Come back later</td><td>Repeat steps 3, 4 and 5 — setup doesn't run twice, so it's about ten seconds</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>If something goes wrong</h2>
+    <p class="intro">None of these break anything. Terminal is blunt, not angry.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td><code>command not found: python3</code></td>
+              <td>Python isn't installed yet — go back to step 1</td></tr>
+          <tr><td><code>no such file or directory</code></td>
+              <td>The <code>cd</code> line didn't land. Redo step 4 and drag the folder in rather than typing its name</td></tr>
+          <tr><td><code>permission denied</code></td>
+              <td>Make sure you typed <code>bash start.command</code>, with <code>bash</code> in front</td></tr>
+          <tr><td>The browser doesn't open by itself</td>
+              <td>Type <code>localhost:8000</code> into Chrome or Safari yourself</td></tr>
+          <tr><td>"This site can't be reached"</td>
+              <td>The Terminal window has to stay open while the dashboard is running</td></tr>
+          <tr><td>Terminal looks frozen</td>
+              <td>It's almost always waiting for you — press <kbd>Enter</kbd>. To interrupt anything at all, <kbd>Control</kbd> + <kbd>C</kbd></td></tr>
+          <tr><td>Something else entirely</td>
+              <td>Close the Terminal window, open a new one, and start again from step 3. Your test data is kept</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>What's worth writing down</h2>
+    <p class="intro">Wording complaints count as findings. The copy is placeholder and
+      tone-configurable, so "no Egyptian buyer would say it like that" is exactly the
+      kind of note that's useful now.</p>
+    <ul>
+      <li>Anything the bot didn't understand — <b>your exact words</b>, and its reply</li>
+      <li>Any question it asked that it should already have known the answer to</li>
+      <li>Any brief where a consultant would still have to ask the buyer something basic</li>
+      <li>Leads scored <b>hot</b> that your floor would call cold, and the reverse</li>
+    </ul>
+    <p>The full test-case list — thirteen of them, including the returning buyer and the
+      opt-out — is in <code>docs/UAT.md</code> inside the folder you downloaded.</p>
+  </section>
+
+  <footer>
+    Buyer Bot prototype · AI Customer Profiler · Robusta Technology Group.
+    Sample inventory and pilot conversion figures in this build are illustrative,
+    not Views' real stock or results.
+  </footer>
+</div>
+
+<script>
+  // Copy buttons on the two commands.
+  document.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy);
+        const original = button.textContent;
+        button.textContent = "Copied";
+        setTimeout(() => { button.textContent = original; }, 1600);
+      } catch (err) {
+        button.textContent = "Select it by hand";
+      }
+    });
+  });
+
+  // Remember which steps are ticked off, so a break doesn't lose your place.
+  const KEY = "buyer-bot-mac-guide";
+
+  function read() {
+    try {
+      return JSON.parse(localStorage.getItem(KEY) || "{}");
+    } catch (err) {
+      return {};
+    }
+  }
+
+  function write(state) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(state));
+    } catch (err) {
+      /* private window, or storage blocked - ticking still works for this visit */
+    }
+  }
+
+  const state = read();
+  document.querySelectorAll("[data-step]").forEach((box) => {
+    const id = box.dataset.step;
+    box.checked = Boolean(state[id]);
+    document.getElementById(id).classList.toggle("done", box.checked);
+    box.addEventListener("change", () => {
+      const next = read();
+      next[id] = box.checked;
+      write(next);
+      document.getElementById(id).classList.toggle("done", box.checked);
+    });
+  });
+</script>
