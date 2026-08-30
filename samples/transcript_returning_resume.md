@@ -1,6 +1,6 @@
 # Returning buyer · profile retrieved · no repeated questions
 
-`C-ab869f55` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
+`C-cd20898d` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0_5`  
 > Welcome back, Hana! Last time you were looking at 3-bed apartment in New Cairo around 7-12M. Want to pick up there, or start fresh?  

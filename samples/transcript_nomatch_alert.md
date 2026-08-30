@@ -1,6 +1,6 @@
 # No exact match · search widened · alert registered
 
-`C-0d9baa8f` · buyer `+201667778899` · source `meta_ad` · band **cold** (score 2)
+`C-511463b5` · buyer `+201667778899` · source `meta_ad` · band **cold** (score 2)
 
 **Bot** `N0`  
 > Hi Nada! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  

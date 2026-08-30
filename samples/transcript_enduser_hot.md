@@ -1,6 +1,6 @@
 # End user · hot lead · books a viewing
 
-`C-9aef61a1` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
+`C-aa051cb7` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Hana! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
