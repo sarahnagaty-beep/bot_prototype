@@ -1,0 +1,663 @@
+<title>Buyer Profiler Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #eef0f1;
+    --surface: #fbfcfc;
+    --surface-2: #f4f6f7;
+    --line: #dce1e4;
+    --line-strong: #c3cbd1;
+    --ink: #12181d;
+    --ink-2: #4b5761;
+    --ink-3: #74818b;
+    --accent: #1b5aa8;
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --hot: #c0342b;
+    --warm: #a8720a;
+    --cold: #6b7684;
+    --shadow: 0 1px 2px rgba(18, 24, 29, .06), 0 8px 24px rgba(18, 24, 29, .05);
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper: #101416;
+      --surface: #191d1f;
+      --surface-2: #21262a;
+      --line: #2c3338;
+      --line-strong: #3a434a;
+      --ink: #eef2f4;
+      --ink-2: #afbac1;
+      --ink-3: #8593a0;
+      --accent: #6fa8f0;
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --hot: #e66767;
+      --warm: #e0a33a;
+      --cold: #96a1ae;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #101416;
+    --surface: #191d1f;
+    --surface-2: #21262a;
+    --line: #2c3338;
+    --line-strong: #3a434a;
+    --ink: #eef2f4;
+    --ink-2: #afbac1;
+    --ink-3: #8593a0;
+    --accent: #6fa8f0;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --hot: #e66767;
+    --warm: #e0a33a;
+    --cold: #96a1ae;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .shell { max-width: 1240px; margin: 0 auto; padding: 28px 20px 72px; }
+
+  /* ---- header ---- */
+  .masthead {
+    display: flex; flex-wrap: wrap; gap: 16px 24px;
+    align-items: flex-end; justify-content: space-between;
+    padding-bottom: 18px; border-bottom: 2px solid var(--line-strong);
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  h1 {
+    font-family: var(--display); font-weight: 700; font-size: 30px;
+    letter-spacing: -.02em; margin: 6px 0 4px; text-wrap: balance;
+  }
+  .masthead p { margin: 0; color: var(--ink-2); max-width: 62ch; }
+  .stamp {
+    font-family: var(--mono); font-size: 11.5px; color: var(--ink-3);
+    text-align: right; line-height: 1.7;
+  }
+  .stamp b { color: var(--ink-2); font-weight: 500; }
+  .live-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--series-1); margin-right: 6px; vertical-align: middle;
+  }
+
+  /* ---- pipeline strip ---- */
+  .pipeline {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin: 22px 0 26px;
+  }
+  .pipeline div { background: var(--surface); padding: 12px 14px; }
+  .pipeline .n {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    letter-spacing: .1em;
+  }
+  .pipeline .t { font-weight: 600; font-size: 14px; margin-top: 2px; }
+  .pipeline .d { color: var(--ink-3); font-size: 13px; }
+
+  /* ---- cards ---- */
+  .card {
+    min-width: 0;  /* grid items default to min-content and would overflow */
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 3px; box-shadow: var(--shadow); padding: 18px 20px 20px;
+  }
+  .card > header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .card h2 {
+    font-family: var(--display); font-weight: 600; font-size: 16px;
+    letter-spacing: -.01em; margin: 0;
+  }
+  .card .sub { color: var(--ink-3); font-size: 13px; margin: 0 0 16px; }
+
+  .grid-kpi {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+    gap: 12px; margin-bottom: 22px;
+  }
+  .kpi {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 3px;
+    padding: 14px 16px 16px; box-shadow: var(--shadow);
+  }
+  .kpi .label {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  .kpi .value {
+    font-family: var(--display); font-weight: 700; font-size: 32px;
+    letter-spacing: -.02em; line-height: 1.15; margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi .value small { font-size: 16px; font-weight: 600; color: var(--ink-2); }
+  .kpi .foot { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; }
+  .kpi.feature { border-color: var(--accent); border-left-width: 3px; }
+  .kpi.feature .value { color: var(--accent); }
+
+  .cols { min-width: 0; display: grid; grid-template-columns: 1.15fr 1fr; gap: 12px; margin-bottom: 12px; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+
+  /* ---- bar charts ---- */
+  .bars { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 78px; gap: 12px; align-items: center; }
+  .bar-row .name { font-size: 13.5px; color: var(--ink-2); }
+  .track { min-width: 0; height: 18px; background: var(--surface-2); border-radius: 2px; }
+  .fill {
+    height: 100%; background: var(--series-1);
+    border-radius: 0 4px 4px 0; min-width: 2px;
+    transition: width .45s cubic-bezier(.2, .7, .3, 1);
+  }
+  .val {
+    font-family: var(--mono); font-size: 11.5px; color: var(--ink-2);
+    font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right;
+  }
+
+  .ab-row { display: grid; grid-template-columns: 116px 1fr; gap: 12px; align-items: center; }
+  .ab-pair { display: flex; flex-direction: column; gap: 3px; }
+  .ab-line { display: grid; grid-template-columns: 1fr 54px; gap: 10px; align-items: center; }
+  .ab-track { min-width: 0; height: 14px; background: var(--surface-2); border-radius: 2px; }
+  .ab-fill { height: 100%; border-radius: 0 4px 4px 0; min-width: 2px; }
+  .ab-fill.profiled { background: var(--series-1); }
+  .ab-fill.control { background: var(--series-2); }
+
+  .bands { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .band-stat {
+    flex: 1 1 100px; border: 1px solid var(--line); border-left-width: 3px;
+    border-radius: 2px; padding: 9px 12px;
+  }
+  .band-stat.hot { border-left-color: var(--hot); }
+  .band-stat.warm { border-left-color: var(--warm); }
+  .band-stat.cold { border-left-color: var(--cold); }
+  .band-stat b {
+    display: block; font-family: var(--display); font-size: 22px; font-weight: 700;
+    font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+  }
+  .band-stat span {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--ink-2); }
+  .swatch { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+  .swatch.profiled { background: var(--series-1); }
+  .swatch.control { background: var(--series-2); }
+
+  .uplift {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    padding: 12px 14px; background: var(--surface-2);
+    border-left: 3px solid var(--series-1); border-radius: 2px; margin-bottom: 18px;
+  }
+  .uplift b {
+    font-family: var(--display); font-size: 26px; font-weight: 700;
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+  }
+  .uplift span { color: var(--ink-2); font-size: 13.5px; }
+
+  .note {
+    font-size: 12.5px; color: var(--ink-3); margin: 14px 0 0;
+    padding-top: 12px; border-top: 1px solid var(--line);
+  }
+
+  /* ---- lead table ---- */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); font-weight: 400;
+    text-align: left; padding: 0 12px 8px; border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: var(--surface-2); }
+  tbody tr:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .who { font-weight: 600; }
+  .who small { display: block; font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-weight: 400; }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+    text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+    border: 1px solid currentColor; white-space: nowrap;
+  }
+  .chip.hot { color: var(--hot); }
+  .chip.warm { color: var(--warm); }
+  .chip.cold { color: var(--cold); }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+  /* ---- brief panel ---- */
+  .scrim {
+    position: fixed; inset: 0; background: rgba(9, 13, 16, .45);
+    opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 40;
+  }
+  .scrim.open { opacity: 1; pointer-events: auto; }
+  .panel {
+    position: fixed; top: 0; right: 0; height: 100%; width: min(560px, 100%);
+    background: var(--surface); border-left: 1px solid var(--line-strong);
+    box-shadow: -12px 0 40px rgba(0, 0, 0, .18);
+    transform: translateX(100%); transition: transform .28s cubic-bezier(.2, .7, .3, 1);
+    z-index: 50; display: flex; flex-direction: column;
+  }
+  .panel.open { transform: none; }
+  .panel-head {
+    padding: 18px 22px 14px; border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  }
+  .panel-head h3 { font-family: var(--display); font-size: 20px; margin: 4px 0 2px; letter-spacing: -.01em; }
+  .panel-body { overflow-y: auto; padding: 18px 22px 40px; }
+  .panel h4 {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-3); font-weight: 400;
+    margin: 22px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+  }
+  .panel h4:first-child { margin-top: 0; }
+  .facts { display: grid; grid-template-columns: 128px 1fr; gap: 7px 14px; font-size: 13.5px; }
+  .facts dt { color: var(--ink-3); }
+  .facts dd { margin: 0; }
+  .points { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: 14px; }
+  .unit {
+    border: 1px solid var(--line); border-radius: 2px; padding: 10px 12px;
+    margin-bottom: 8px; background: var(--surface-2);
+  }
+  .unit.engaged { border-color: var(--accent); border-left-width: 3px; }
+  .unit .u-title { font-weight: 600; font-size: 13.5px; }
+  .unit .u-meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); margin-top: 3px; }
+  .turns { display: flex; flex-direction: column; gap: 10px; }
+  .turn { font-size: 13.5px; }
+  .turn .role {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  .turn.buyer p {
+    background: var(--surface-2); border-left: 2px solid var(--line-strong);
+    padding: 7px 10px; margin: 3px 0 0; border-radius: 2px; white-space: pre-wrap;
+  }
+  .turn.bot p { margin: 3px 0 0; white-space: pre-wrap; }
+  .x {
+    background: none; border: 1px solid var(--line-strong); border-radius: 2px;
+    color: var(--ink-2); font-family: var(--mono); font-size: 12px;
+    padding: 4px 9px; cursor: pointer;
+  }
+  .x:hover { background: var(--surface-2); color: var(--ink); }
+
+  .breakdown { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+  .breakdown div { display: flex; justify-content: space-between; gap: 12px; }
+  .breakdown .pts { font-family: var(--mono); color: var(--ink-2); }
+
+  @media (max-width: 620px) {
+    .shell { padding: 20px 14px 56px; }
+    h1 { font-size: 24px; }
+    .pipeline { grid-template-columns: 1fr 1fr; }
+    .bar-row { grid-template-columns: 104px 1fr 62px; gap: 8px; }
+    .ab-row { grid-template-columns: 84px 1fr; gap: 8px; }
+    .masthead { flex-direction: column; align-items: flex-start; }
+    .stamp { text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="shell">
+  <header class="masthead">
+    <div>
+      <div class="eyebrow">AI Customer Profiler · WhatsApp</div>
+      <h1>Buyer Profiler Desk</h1>
+      <p>Every buyer who clicks the ad is profiled on WhatsApp before an agent picks up the phone.
+        This is what the floor and the board see: who is in the pipeline, what they want, and what
+        profiling does to conversion.</p>
+    </div>
+    <div class="stamp" id="stamp"><span class="live-dot"></span>loading…</div>
+  </header>
+
+  <div class="pipeline">
+    <div><div class="n">STEP 1</div><div class="t">Meta ad click</div><div class="d">Attribution captured with the lead</div></div>
+    <div><div class="n">STEP 2</div><div class="t">WhatsApp profiling</div><div class="d">Short qualification, one question at a time</div></div>
+    <div><div class="n">STEP 3</div><div class="t">Buyer brief</div><div class="d">Agent gets the profile before the first call</div></div>
+    <div><div class="n">STEP 4</div><div class="t">Routed by band</div><div class="d">Hot to a consultant, cold to nurture</div></div>
+  </div>
+
+  <div class="grid-kpi" id="kpis"></div>
+
+  <div class="cols">
+    <section class="card">
+      <header><h2>Profiled vs control</h2></header>
+      <p class="sub">Same ads, same floor. One cohort's agents call with a brief; the other calls cold.</p>
+      <div class="uplift" id="uplift"></div>
+      <div class="legend">
+        <span><i class="swatch profiled"></i> Profiled leads</span>
+        <span><i class="swatch control"></i> Control leads</span>
+      </div>
+      <div class="bars" id="ab-chart"></div>
+      <p class="note" id="ab-note"></p>
+    </section>
+
+    <section class="card">
+      <header><h2>Conversation funnel</h2></header>
+      <p class="sub">Where buyers drop between the ad click and the consultant.</p>
+      <div class="bars" id="funnel-chart"></div>
+      <div class="bands" id="bands"></div>
+      <p class="note">Percentages are of all started conversations. Band decides routing:
+        hot goes straight to a consultant, cold to nurture.</p>
+    </section>
+  </div>
+
+  <div class="cols">
+    <section class="card">
+      <header><h2>What buyers are asking for</h2></header>
+      <p class="sub">Demand data the brokerage never had before: captured from conversations, not guessed.</p>
+      <div id="demand"></div>
+    </section>
+
+    <section class="card">
+      <header><h2>Lead sources</h2></header>
+      <p class="sub">Which campaigns produce conversations that finish qualification.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Started</th><th>Qualified</th><th>Rate</th></tr></thead>
+          <tbody id="sources"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="card">
+    <header>
+      <h2>Lead queue</h2>
+      <span class="eyebrow" id="lead-count"></span>
+    </header>
+    <p class="sub">Ranked by qualification score. Open a row for the brief the consultant receives.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Buyer</th><th>Type</th><th>Looking for</th><th>Budget</th>
+            <th>Timeline</th><th>Asked for</th><th>Score</th><th>Consultant</th>
+          </tr>
+        </thead>
+        <tbody id="leads"></tbody>
+      </table>
+    </div>
+    <p class="note">Prototype data generated by running the conversation script end to end. Outcome
+      rates in the pilot panel are illustrative until a live cohort replaces them.</p>
+  </section>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" aria-label="Buyer brief" aria-hidden="true">
+  <div class="panel-head">
+    <div>
+      <div class="eyebrow">Buyer brief</div>
+      <h3 id="panel-name">—</h3>
+      <div class="num" id="panel-meta" style="font-size:12px;color:var(--ink-3)"></div>
+    </div>
+    <button class="x" id="panel-close">Close</button>
+  </div>
+  <div class="panel-body" id="panel-body"></div>
+</aside>
+
+<script id="bootstrap-data" type="application/json">{"snapshot": {"headline": {"conversations": 10, "qualified": 6, "qualified_rate": 60.0, "actions": 7, "action_rate": 70.0, "handoffs": 6, "hot_leads": 4, "bands": {"hot": 4, "warm": 1, "cold": 2}, "uplift_pp": 2.4, "uplift_relative": 33.3, "profiled_close_rate": 9.6, "control_close_rate": 7.2}, "funnel": [{"step": "Conversations started", "count": 10, "pct_of_started": 100.0}, {"step": "Opted in", "count": 8, "pct_of_started": 80.0}, {"step": "Qualified (flow completed)", "count": 6, "pct_of_started": 60.0}, {"step": "Recommendations shown", "count": 6, "pct_of_started": 60.0}, {"step": "Action taken", "count": 7, "pct_of_started": 70.0}, {"step": "Handed to consultant", "count": 6, "pct_of_started": 60.0}], "sources": [{"source": "IG_LEADGEN_BRAND_Q3", "started": 2, "qualified": 0, "qualified_rate": 0.0}, {"source": "IG_LEADGEN_NEWCAIRO_Q3", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "FB_LEADGEN_INVEST_Q3", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "IG_LEADGEN_OCTOBER_Q3", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "WEBSITE_CHAT", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "IG_LEADGEN_NORTHCOAST_Q3", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "QR_BILLBOARD_RING_ROAD", "started": 1, "qualified": 0, "qualified_rate": 0.0}, {"source": "FB_LEADGEN_ZAYED_Q3", "started": 1, "qualified": 1, "qualified_rate": 100.0}, {"source": "IG_RETARGETING_Q3", "started": 1, "qualified": 0, "qualified_rate": 0.0}], "demand": {"areas": [{"label": "North Coast", "count": 2}, {"label": "New Cairo", "count": 1}, {"label": "6th October", "count": 1}, {"label": "Sheikh Zayed", "count": 1}], "budgets": [{"label": "4-7M", "count": 3}, {"label": "7-12M", "count": 1}, {"label": "Under 4M", "count": 1}, {"label": "12-20M", "count": 1}], "unit_types": [{"label": "apartment", "count": 2}, {"label": "chalet", "count": 1}, {"label": "villa", "count": 1}, {"label": "townhouse", "count": 1}], "timelines": [{"label": "asap", "count": 3}, {"label": "1 3 months", "count": 1}, {"label": "3 6 months", "count": 1}, {"label": "exploring", "count": 1}]}, "ab_test": {"profiled": [{"stage": "lead", "label": "Leads", "count": 187, "rate": 100.0}, {"stage": "contacted", "label": "Contacted", "count": 168, "rate": 89.8}, {"stage": "viewing", "label": "Viewing booked", "count": 79, "rate": 42.2}, {"stage": "reserved", "label": "Reserved", "count": 26, "rate": 13.9}, {"stage": "closed", "label": "Closed", "count": 18, "rate": 9.6}], "control": [{"stage": "lead", "label": "Leads", "count": 180, "rate": 100.0}, {"stage": "contacted", "label": "Contacted", "count": 137, "rate": 76.1}, {"stage": "viewing", "label": "Viewing booked", "count": 49, "rate": 27.2}, {"stage": "reserved", "label": "Reserved", "count": 19, "rate": 10.6}, {"stage": "closed", "label": "Closed", "count": 13, "rate": 7.2}], "profiled_close_rate": 9.6, "control_close_rate": 7.2, "uplift_pp": 2.4, "uplift_relative": 33.3, "sample": {"profiled": 187, "control": 180}}, "leads": [{"lead_id": "L-234567", "conversation_id": "C-33f2a43d", "name": "Hana Mostafa", "wa_id": "+201001234567", "buyer_type": "end_user", "areas": ["New Cairo"], "unit_type": "apartment", "bedrooms": "3", "budget": "7-12M", "payment": "installments", "timeline": "asap", "intent": "reserve", "score": 8, "band": "hot", "consultant": "Youssef Adel", "source": "IG_RETARGETING_Q3", "sessions": 2, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-876543", "conversation_id": "C-c37dcea0", "name": "Omar Zaki", "wa_id": "+201009876543", "buyer_type": "investor", "areas": [], "unit_type": "", "bedrooms": "", "budget": "4-7M", "payment": "cash", "timeline": "1_3_months", "intent": "consultant", "score": 8, "band": "hot", "consultant": "Youssef Adel", "source": "FB_LEADGEN_INVEST_Q3", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-334455", "conversation_id": "C-7750a342", "name": "Sara Nabil", "wa_id": "+201223334455", "buyer_type": "end_user", "areas": ["North Coast"], "unit_type": "chalet", "bedrooms": "2", "budget": "4-7M", "payment": "cash", "timeline": "asap", "intent": "viewing", "score": 8, "band": "hot", "consultant": "Nour Ibrahim", "source": "WEBSITE_CHAT", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-001122", "conversation_id": "C-5284ba55", "name": "Yara Selim", "wa_id": "+201990001122", "buyer_type": "end_user", "areas": ["Sheikh Zayed"], "unit_type": "townhouse", "bedrooms": "4+", "budget": "12-20M", "payment": "cash", "timeline": "asap", "intent": "reserve", "score": 8, "band": "hot", "consultant": "Mariam Fahmy", "source": "FB_LEADGEN_ZAYED_Q3", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-223344", "conversation_id": "C-b90b85d7", "name": "Ahmed Sobhy", "wa_id": "+201112223344", "buyer_type": "end_user", "areas": ["6th October"], "unit_type": "apartment", "bedrooms": "3", "budget": "4-7M", "payment": "installments", "timeline": "3_6_months", "intent": "brochure", "score": 5, "band": "warm", "consultant": "", "source": "IG_LEADGEN_OCTOBER_Q3", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-778899", "conversation_id": "C-8e281808", "name": "Nada Kamal", "wa_id": "+201667778899", "buyer_type": "end_user", "areas": ["North Coast"], "unit_type": "villa", "bedrooms": "4+", "budget": "Under 4M", "payment": "installments", "timeline": "exploring", "intent": "brochure", "score": 2, "band": "cold", "consultant": "", "source": "IG_LEADGEN_NORTHCOAST_Q3", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}, {"lead_id": "L-889900", "conversation_id": "C-5f441692", "name": "Karim Elwy", "wa_id": "+201778889900", "buyer_type": "", "areas": [], "unit_type": "", "bedrooms": "", "budget": "", "payment": "", "timeline": "", "intent": "", "score": 0, "band": "cold", "consultant": "Karim Saleh", "source": "QR_BILLBOARD_RING_ROAD", "sessions": 1, "created_at": "2026-08-30T12:36:58+00:00", "updated_at": "2026-08-30T12:36:58+00:00"}]}, "briefs": {"L-234567": {"buyer": {"name": "Hana Mostafa", "whatsapp": "+201001234567", "language": "en", "source": "meta_ad", "source_ref": "IG_RETARGETING_Q3", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 2}, "qualification": {"buyer_type": "End user", "areas": ["New Cairo"], "unit_type": "apartment", "bedrooms": "3", "property_status": "Primary", "delivery": "Off-plan", "investor_goal": "", "units_target": "", "budget": "7-12M", "payment": "Installments - 15% down, over 8 years, quarterly, backloaded", "timeline": "ASAP - within a month", "intent": "Express interest / reserve", "looking_for": "3-bed apartment in New Cairo"}, "scoring": {"score": 8, "band": "hot", "routing": "Immediate handoff to consultant via rotation with full transcript.", "breakdown": [{"signal": "Budget defined & realistic", "points": 2, "note": "7-12M fits available stock"}, {"signal": "Comfortable down payment", "points": 2, "note": "15% down"}, {"signal": "Timeline", "points": 3, "note": "asap"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}]}, "shortlist": [{"unit_id": "NC-APT-301", "project": "Palm Ridge", "headline": "3-bed apartment, 165 m²", "area": "New Cairo", "price": "9.2M EGP", "payment": "10% down, ~144K/qtr (quarterly, backloaded)", "delivery": "delivery 2027"}, {"unit_id": "NC-APT-302", "project": "Palm Ridge", "headline": "3-bed apartment, 186 m²", "area": "New Cairo", "price": "11.4M EGP", "payment": "10% down, ~51K/mo (monthly, equal)", "delivery": "delivery 2028"}, {"unit_id": "NC-APT-260", "project": "Cedar Walk", "headline": "4-bed apartment, 205 m²", "area": "New Cairo", "price": "13.2M EGP", "payment": "10% down, ~59K/mo (monthly, backloaded)", "delivery": "delivery 2028"}, {"unit_id": "NC-APT-118", "project": "Cedar Walk", "headline": "2-bed apartment, 124 m²", "area": "New Cairo", "price": "6.6M EGP", "payment": "20% down, ~88K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "NC-APT-119", "project": "Cedar Walk", "headline": "3-bed apartment, 158 m²", "area": "New Cairo", "price": "8.4M EGP", "payment": "Cash / resale - full payment", "delivery": "ready to move"}], "selected_unit_id": "NC-DUP-044", "concerns": [], "consultant": "Youssef Adel", "talking_points": ["Returning buyer - 2 sessions. Do not restart discovery; open by confirming what changed.", "Timeline is inside a month - lead with availability, not options.", "Comfortable at 15% down - anchor on quarterly instalment, not headline price.", "Engaged most with Palm Ridge NC-DUP-044 - start there."], "transcript": [{"role": "bot", "text": "Welcome back, Hana! Last time you were looking at 3-bed apartment in New Cairo around 7-12M. Want to pick up there, or start fresh?\n[Pick up] [Start fresh]", "node": "N0_5", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "Pick up", "node": "N0_5", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Based on what you told me, here are your best matches - swipe through:\n- Palm Ridge · 3-bed apartment | 165 m² · New Cairo · primary | 9.2M EGP | 10% down, ~144K/qtr (quarterly, backloaded) | delivery 2027\n- Palm Ridge · 3-bed apartment | 186 m² · New Cairo · primary | 11.4M EGP | 10% down, ~51K/mo (monthly, equal) | delivery 2028\n- Cedar Walk · 4-bed apartment | 205 m² · New Cairo · primary | 13.2M EGP | 10% down, ~59K/mo (monthly, backloaded) | delivery 2028\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- Cedar Walk · 3-bed apartment | 158 m² · New Cairo · resale | 8.4M EGP | Cash / resale - full payment | ready to move", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "For about 34K EGP/month more you could move up to a 4-bed duplex (240 m²) at Palm Ridge - want to see it?\n[Yes, show me] [No thanks]", "node": "N7", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "no thanks", "node": "N7", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "express interest", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?", "node": "N9", "at": "2026-08-30T12:36:58+00:00"}]}, "L-876543": {"buyer": {"name": "Omar Zaki", "whatsapp": "+201009876543", "language": "en", "source": "meta_ad", "source_ref": "FB_LEADGEN_INVEST_Q3", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "Investor", "areas": ["Open"], "unit_type": "Open", "bedrooms": "Open", "property_status": "Primary or resale", "delivery": "Ready to move", "investor_goal": "Rental yield", "units_target": "2-3 units", "budget": "4-7M", "payment": "Cash - flag discount eligibility", "timeline": "1-3 months", "intent": "Talk to a consultant", "looking_for": "Open brief - matched on returns"}, "scoring": {"score": 8, "band": "hot", "routing": "Immediate handoff to consultant via rotation with full transcript.", "breakdown": [{"signal": "Budget defined & realistic", "points": 2, "note": "4-7M fits available stock"}, {"signal": "Cash buyer", "points": 2, "note": "Flag discount eligibility"}, {"signal": "Timeline", "points": 2, "note": "1 3 months"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}, {"signal": "Investor with defined budget", "points": 1, "note": "Tends to convert faster"}]}, "shortlist": [{"unit_id": "OC-CHL-330", "project": "Sandline", "headline": "2-bed chalet, 98 m²", "area": "North Coast", "price": "5.9M EGP", "payment": "Cash / resale - full payment", "delivery": "ready to move"}, {"unit_id": "OO-APT-411", "project": "Garden Court", "headline": "2-bed apartment, 112 m²", "area": "6th October", "price": "3.9M EGP", "payment": "15% down, ~52K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "NC-APT-118", "project": "Cedar Walk", "headline": "2-bed apartment, 124 m²", "area": "New Cairo", "price": "6.6M EGP", "payment": "20% down, ~88K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "OO-APT-410", "project": "Garden Court", "headline": "3-bed apartment, 150 m²", "area": "6th October", "price": "5.8M EGP", "payment": "10% down, ~27K/mo (monthly, equal)", "delivery": "delivery 2027"}, {"unit_id": "SZ-APT-211", "project": "West Gate Park", "headline": "2-bed apartment, 118 m²", "area": "Sheikh Zayed", "price": "6.9M EGP", "payment": "10% down, ~33K/mo (monthly, equal)", "delivery": "delivery 2027"}, {"unit_id": "OC-CHL-501", "project": "Azure Bay", "headline": "2-bed chalet, 110 m²", "area": "North Coast", "price": "7.4M EGP", "payment": "10% down, ~118K/qtr (quarterly, backloaded)", "delivery": "delivery 2027"}], "selected_unit_id": "OC-CHL-501", "concerns": [], "consultant": "Youssef Adel", "talking_points": ["Cash buyer - open with the cash discount and ready/resale stock.", "Investor led by rental yield - bring the numbers, skip the lifestyle pitch.", "Engaged most with Azure Bay OC-CHL-501 - start there."], "transcript": [{"role": "bot", "text": "Hi Omar! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "I want to invest", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Smart - are you after...\n[Capital appreciation] [Rental yield] [Both]", "node": "N2I", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "rental yield", "node": "N2I", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How many units are you considering?\n[1] [2-3] [Portfolio / 4+]", "node": "N2I_UNITS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "2-3", "node": "N2I_UNITS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "4-7M", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Would you pay cash or in installments?\n[Cash] [Installments]", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "cash", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "1-3 months", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Based on what you told me, here are your best matches - swipe through:\n- Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "One more worth a look - Azure Bay offers a higher-tier unit at 9.2% gross yield with off-plan launch pricing. Want to see it?\n[Yes, show me] [No thanks]", "node": "N7", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes, show me", "node": "N7", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Here it is:\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027", "node": "N7", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "talk to a consultant", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?", "node": "N9", "at": "2026-08-30T12:36:58+00:00"}]}, "L-223344": {"buyer": {"name": "Ahmed Sobhy", "whatsapp": "+201112223344", "language": "en", "source": "meta_ad", "source_ref": "IG_LEADGEN_OCTOBER_Q3", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "End user", "areas": ["6th October"], "unit_type": "apartment", "bedrooms": "3", "property_status": "Primary", "delivery": "Either", "investor_goal": "", "units_target": "", "budget": "4-7M", "payment": "Installments - 10% down, over 8 years, monthly, equal", "timeline": "3-6 months", "intent": "Send full brochure", "looking_for": "3-bed apartment in 6th October"}, "scoring": {"score": 5, "band": "warm", "routing": "Recommend units, push to viewing/brochure. Consultant follow-up.", "breakdown": [{"signal": "Budget defined & realistic", "points": 2, "note": "4-7M fits available stock"}, {"signal": "Financing-dependent", "points": 1, "note": "10% down"}, {"signal": "Timeline", "points": 1, "note": "3 6 months"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}]}, "shortlist": [{"unit_id": "OO-APT-410", "project": "Garden Court", "headline": "3-bed apartment, 150 m²", "area": "6th October", "price": "5.8M EGP", "payment": "10% down, ~27K/mo (monthly, equal)", "delivery": "delivery 2027"}, {"unit_id": "OO-APT-411", "project": "Garden Court", "headline": "2-bed apartment, 112 m²", "area": "6th October", "price": "3.9M EGP", "payment": "15% down, ~52K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "NC-APT-118", "project": "Cedar Walk", "headline": "2-bed apartment, 124 m²", "area": "New Cairo", "price": "6.6M EGP", "payment": "20% down, ~88K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "SZ-APT-211", "project": "West Gate Park", "headline": "2-bed apartment, 118 m²", "area": "Sheikh Zayed", "price": "6.9M EGP", "payment": "10% down, ~33K/mo (monthly, equal)", "delivery": "delivery 2027"}, {"unit_id": "OC-CHL-501", "project": "Azure Bay", "headline": "2-bed chalet, 110 m²", "area": "North Coast", "price": "7.4M EGP", "payment": "10% down, ~118K/qtr (quarterly, backloaded)", "delivery": "delivery 2027"}], "selected_unit_id": "OO-APT-410", "concerns": [], "consultant": "", "talking_points": ["Comfortable at 10% down - anchor on monthly instalment, not headline price.", "Engaged most with Garden Court OO-APT-410 - start there."], "transcript": [{"role": "bot", "text": "Hi Ahmed! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "buy to live in", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "6th October", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "apartment", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How many bedrooms?\n[1] [2] [3] [4+]", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "3", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "primary", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "either", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "4-7M", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Would you pay cash or in installments?\n[Cash] [Installments]", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "installments", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great - our plans start around 10% down over up to 8 years. What down payment feels comfortable?\n[10%] [15%] [20%+] [Not sure]", "node": "N3_DOWN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "10%", "node": "N3_DOWN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How would you like to structure the installments?\n[Monthly] [Quarterly]", "node": "N3_FREQUENCY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "monthly", "node": "N3_FREQUENCY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And equal installments, or backloaded (smaller now, larger later)?\n[Equal] [Backloaded]", "node": "N3_STRUCTURE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "equal", "node": "N3_STRUCTURE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "3-6 months", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Based on what you told me, here are your best matches - swipe through:\n- Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "no thanks", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Sorry - I didn't catch that. Pick one of these and we'll keep moving:\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N11", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "get full brochure", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "I'll keep an eye out and send you anything new that fits. Reply STOP any time to opt out.", "node": "N10", "at": "2026-08-30T12:36:58+00:00"}]}, "L-334455": {"buyer": {"name": "Sara Nabil", "whatsapp": "+201223334455", "language": "en", "source": "website", "source_ref": "WEBSITE_CHAT", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "End user", "areas": ["North Coast"], "unit_type": "chalet", "bedrooms": "2", "property_status": "Resale", "delivery": "Ready to move", "investor_goal": "", "units_target": "", "budget": "4-7M", "payment": "Cash - flag discount eligibility", "timeline": "ASAP - within a month", "intent": "Book a viewing", "looking_for": "2-bed chalet in North Coast"}, "scoring": {"score": 8, "band": "hot", "routing": "Immediate handoff to consultant via rotation with full transcript.", "breakdown": [{"signal": "Budget defined & realistic", "points": 2, "note": "4-7M fits available stock"}, {"signal": "Cash buyer", "points": 2, "note": "Flag discount eligibility"}, {"signal": "Timeline", "points": 3, "note": "asap"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}]}, "shortlist": [{"unit_id": "OC-CHL-330", "project": "Sandline", "headline": "2-bed chalet, 98 m²", "area": "North Coast", "price": "5.9M EGP", "payment": "Cash / resale - full payment", "delivery": "ready to move"}, {"unit_id": "OC-CHL-501", "project": "Azure Bay", "headline": "2-bed chalet, 110 m²", "area": "North Coast", "price": "7.4M EGP", "payment": "10% down, ~118K/qtr (quarterly, backloaded)", "delivery": "delivery 2027"}, {"unit_id": "OO-APT-411", "project": "Garden Court", "headline": "2-bed apartment, 112 m²", "area": "6th October", "price": "3.9M EGP", "payment": "15% down, ~52K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "NC-APT-118", "project": "Cedar Walk", "headline": "2-bed apartment, 124 m²", "area": "New Cairo", "price": "6.6M EGP", "payment": "20% down, ~88K/mo (monthly, equal)", "delivery": "ready to move"}, {"unit_id": "SZ-APT-211", "project": "West Gate Park", "headline": "2-bed apartment, 118 m²", "area": "Sheikh Zayed", "price": "6.9M EGP", "payment": "10% down, ~33K/mo (monthly, equal)", "delivery": "delivery 2027"}], "selected_unit_id": "OC-CHL-330", "concerns": [], "consultant": "Nour Ibrahim", "talking_points": ["Timeline is inside a month - lead with availability, not options.", "Cash buyer - open with the cash discount and ready/resale stock.", "Engaged most with Sandline OC-CHL-330 - start there."], "transcript": [{"role": "bot", "text": "Hi Sara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "sure", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "it's for me and my family", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "somewhere near the coast", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "chalet", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How many bedrooms?\n[1] [2] [3] [4+]", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "2 bedrooms", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "resale is fine", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "ready to move", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "around 6 million", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Would you pay cash or in installments?\n[Cash] [Installments]", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "cash", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "this month", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Based on what you told me, here are your best matches - swipe through:\n- Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move\n- Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027\n- Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move\n- Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "book a viewing", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "You're now with Nour Ibrahim, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?", "node": "N9", "at": "2026-08-30T12:36:58+00:00"}]}, "L-778899": {"buyer": {"name": "Nada Kamal", "whatsapp": "+201667778899", "language": "en", "source": "meta_ad", "source_ref": "IG_LEADGEN_NORTHCOAST_Q3", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "End user", "areas": ["North Coast"], "unit_type": "villa", "bedrooms": "4+", "property_status": "Resale", "delivery": "Ready to move", "investor_goal": "", "units_target": "", "budget": "Under 4M", "payment": "Installments - 10% down, over 8 years, monthly, equal", "timeline": "Just exploring", "intent": "Send full brochure", "looking_for": "4+-bed villa in North Coast"}, "scoring": {"score": 2, "band": "cold", "routing": "Nurture: featured projects, re-engage later. No handoff.", "breakdown": [{"signal": "Budget defined but below entry price", "points": 0, "note": "Offer plan or next-best alternative"}, {"signal": "Financing-dependent", "points": 1, "note": "10% down"}, {"signal": "Timeline", "points": 0, "note": "exploring"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}]}, "shortlist": [], "selected_unit_id": "", "concerns": [], "consultant": "", "talking_points": ["Still exploring - educate, do not push to reserve.", "Comfortable at 10% down - anchor on monthly instalment, not headline price."], "transcript": [{"role": "bot", "text": "Hi Nada! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "buy to live in", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "North Coast", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "villa", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How many bedrooms?\n[1] [2] [3] [4+]", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "4+", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "resale", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "ready to move", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "under 4M", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Would you pay cash or in installments?\n[Cash] [Installments]", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "installments", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great - our plans start around 10% down over up to 8 years. What down payment feels comfortable?\n[10%] [15%] [20%+] [Not sure]", "node": "N3_DOWN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "10%", "node": "N3_DOWN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How would you like to structure the installments?\n[Monthly] [Quarterly]", "node": "N3_FREQUENCY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "monthly", "node": "N3_FREQUENCY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And equal installments, or backloaded (smaller now, larger later)?\n[Equal] [Backloaded]", "node": "N3_STRUCTURE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "equal", "node": "N3_STRUCTURE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "just exploring", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "I don't have an exact fit right now - want me to widen the budget or area, or alert you the moment something matches?\n[Widen the search] [Alert me]", "node": "N6_NOMATCH", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "widen the search", "node": "N6_NOMATCH", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Done - I've saved your criteria and I'll message you the moment a matching unit is released.", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "get full brochure", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "I'll keep an eye out and send you anything new that fits. Reply STOP any time to opt out.", "node": "N10", "at": "2026-08-30T12:36:58+00:00"}]}, "L-889900": {"buyer": {"name": "Karim Elwy", "whatsapp": "+201778889900", "language": "en", "source": "qr", "source_ref": "QR_BILLBOARD_RING_ROAD", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "", "areas": ["Open"], "unit_type": "Open", "bedrooms": "Open", "property_status": "Open", "delivery": "Open", "investor_goal": "", "units_target": "", "budget": "Not stated", "payment": "Not stated", "timeline": "Not stated", "intent": "None yet", "looking_for": "Not specified"}, "scoring": {"score": 0, "band": "cold", "routing": "Nurture: featured projects, re-engage later. No handoff.", "breakdown": []}, "shortlist": [], "selected_unit_id": "", "concerns": [], "consultant": "Karim Saleh", "talking_points": [], "transcript": [{"role": "bot", "text": "Hi Karim! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "hmm", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Sorry - I didn't catch that. Pick one of these and we'll keep moving:\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N11", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "not sure what you mean", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "I want to get this right - would you rather carry on with me, or have one of our consultants call you?\n[Talk to a consultant] [Keep going here]", "node": "N11_HUMAN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "talk to a consultant", "node": "N11_HUMAN", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "You're now with Karim Saleh, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?", "node": "N9", "at": "2026-08-30T12:36:58+00:00"}]}, "L-001122": {"buyer": {"name": "Yara Selim", "whatsapp": "+201990001122", "language": "en", "source": "meta_ad", "source_ref": "FB_LEADGEN_ZAYED_Q3", "first_seen": "2026-08-30T12:36:58+00:00", "sessions": 1}, "qualification": {"buyer_type": "End user", "areas": ["Sheikh Zayed"], "unit_type": "townhouse", "bedrooms": "4+", "property_status": "Primary or resale", "delivery": "Either", "investor_goal": "", "units_target": "", "budget": "12-20M", "payment": "Cash - flag discount eligibility", "timeline": "ASAP - within a month", "intent": "Express interest / reserve", "looking_for": "4+-bed townhouse in Sheikh Zayed"}, "scoring": {"score": 8, "band": "hot", "routing": "Immediate handoff to consultant via rotation with full transcript.", "breakdown": [{"signal": "Budget defined & realistic", "points": 2, "note": "12-20M fits available stock"}, {"signal": "Cash buyer", "points": 2, "note": "Flag discount eligibility"}, {"signal": "Timeline", "points": 3, "note": "asap"}, {"signal": "Completed qualification flow", "points": 1, "note": "Engagement signal"}]}, "shortlist": [{"unit_id": "SZ-TWN-031", "project": "Olive Quarter", "headline": "4-bed townhouse, 270 m²", "area": "Sheikh Zayed", "price": "16.9M EGP", "payment": "Cash / resale - full payment", "delivery": "ready to move"}, {"unit_id": "SZ-APT-210", "project": "West Gate Park", "headline": "3-bed apartment, 172 m²", "area": "Sheikh Zayed", "price": "9.8M EGP", "payment": "10% down, ~47K/mo (monthly, backloaded)", "delivery": "delivery 2027"}, {"unit_id": "SZ-TWN-032", "project": "Olive Quarter", "headline": "4-bed twinhouse, 310 m²", "area": "Sheikh Zayed", "price": "21.5M EGP", "payment": "15% down, ~352K/qtr (quarterly, backloaded)", "delivery": "delivery 2028"}, {"unit_id": "SZ-APT-118", "project": "West Gate Park", "headline": "3-bed apartment, 160 m²", "area": "Sheikh Zayed", "price": "8.2M EGP", "payment": "Cash / resale - full payment", "delivery": "ready to move"}, {"unit_id": "SZ-APT-211", "project": "West Gate Park", "headline": "2-bed apartment, 118 m²", "area": "Sheikh Zayed", "price": "6.9M EGP", "payment": "10% down, ~33K/mo (monthly, equal)", "delivery": "delivery 2027"}], "selected_unit_id": "SZ-TWN-031", "concerns": [], "consultant": "Mariam Fahmy", "talking_points": ["Timeline is inside a month - lead with availability, not options.", "Cash buyer - open with the cash discount and ready/resale stock.", "Engaged most with Olive Quarter SZ-TWN-031 - start there."], "transcript": [{"role": "bot", "text": "Hi Yara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?\n[Yes, let's go] [I'm just browsing]", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "yes", "node": "N0", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Great! Are you looking to...\n[Buy to live in] [Buy as an investment] [I'm a broker]", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "buy to live in", "node": "N1", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Which area are you interested in?\n[New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "Sheikh Zayed", "node": "N2", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And what type of home?\n[Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "townhouse", "node": "N2_TYPE", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "How many bedrooms?\n[1] [2] [3] [4+]", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "4+", "node": "N2_BEDS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Are you open to primary (from the developer) or resale units - or both?\n[Primary] [Resale] [Both]", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "both", "node": "N2_STATUS", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "And would you prefer something ready to move, or off-plan?\n[Ready to move] [Off-plan] [Either]", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "either", "node": "N2_DELIVERY", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What's your budget range?\n[Under 4M] [4-7M] [7-12M] [12-20M] [20M+ EGP]", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "12-20M", "node": "N3", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Would you pay cash or in installments?\n[Cash] [Installments]", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "cash", "node": "N3_PAYMENT", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "When are you hoping to buy?\n[ASAP / within a month] [1-3 months] [3-6 months] [Just exploring]", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "asap", "node": "N4", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Based on what you told me, here are your best matches - swipe through:\n- Olive Quarter · 4-bed townhouse | 270 m² · Sheikh Zayed · resale | 16.9M EGP | Cash / resale - full payment | ready to move\n- West Gate Park · 3-bed apartment | 172 m² · Sheikh Zayed · primary | 9.8M EGP | 10% down, ~47K/mo (monthly, backloaded) | delivery 2027\n- Olive Quarter · 4-bed twinhouse | 310 m² · Sheikh Zayed · primary | 21.5M EGP | 15% down, ~352K/qtr (quarterly, backloaded) | delivery 2028\n- West Gate Park · 3-bed apartment | 160 m² · Sheikh Zayed · resale | 8.2M EGP | Cash / resale - full payment | ready to move\n- West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027", "node": "N6", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "What would you like to do next?\n[Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "buyer", "text": "express interest", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Perfect - I've saved your preferences and shared them with our team.", "node": "N8", "at": "2026-08-30T12:36:58+00:00"}, {"role": "bot", "text": "Our team is offline right now, but Mariam Fahmy has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?", "node": "N11", "at": "2026-08-30T12:36:58+00:00"}]}}}</script>
+<script>
+  const BOOT = JSON.parse(document.getElementById("bootstrap-data").textContent);
+  const TIMELINES = {
+    asap: "Within a month", "1_3_months": "1-3 months",
+    "3_6_months": "3-6 months", exploring: "Exploring",
+  };
+  const INTENTS = {
+    viewing: "Viewing", consultant: "Consultant", brochure: "Brochure",
+    reserve: "Reserve", "": "—",
+  };
+  const TYPES = { end_user: "End user", investor: "Investor", broker: "Broker", "": "—" };
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  async function getJSON(url) {
+    try {
+      const response = await fetch(url, { headers: { accept: "application/json" } });
+      if (!response.ok) return null;
+      return await response.json();
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function bars(rows, max) {
+    return rows.map((row) => {
+      const pct = max ? (row.value / max) * 100 : 0;
+      return `<div class="bar-row">
+        <div class="name">${esc(row.name)}</div>
+        <div class="track" title="${esc(row.tip || row.label)}">
+          <div class="fill" style="width:${pct.toFixed(1)}%"></div>
+        </div>
+        <div class="val">${esc(row.label)}</div>
+      </div>`;
+    }).join("");
+  }
+
+  function renderKpis(h) {
+    const tiles = [
+      { label: "Conversations", value: h.conversations, foot: "started from ads & chat entries" },
+      { label: "Qualified", value: `${h.qualified_rate}<small>%</small>`, foot: `${h.qualified} completed the flow` },
+      { label: "Took an action", value: `${h.action_rate}<small>%</small>`, foot: `${h.actions} viewings, briefs or reserves` },
+      { label: "Hot right now", value: h.hot_leads, foot: `${h.handoffs} handed to consultants` },
+      {
+        label: "Conversion uplift", value: `+${h.uplift_pp}<small>pp</small>`,
+        foot: `${h.profiled_close_rate}% profiled vs ${h.control_close_rate}% control`, feature: true,
+      },
+    ];
+    $("kpis").innerHTML = tiles.map((t) => `
+      <div class="kpi${t.feature ? " feature" : ""}">
+        <div class="label">${t.label}</div>
+        <div class="value">${t.value}</div>
+        <div class="foot">${esc(t.foot)}</div>
+      </div>`).join("");
+  }
+
+  function renderAB(ab) {
+    $("uplift").innerHTML =
+      `<b>+${ab.uplift_pp} pp</b><span>lead-to-close, ${ab.uplift_relative}% better than the control cohort
+       (${ab.sample.profiled} profiled / ${ab.sample.control} control leads)</span>`;
+
+    const control = Object.fromEntries(ab.control.map((r) => [r.stage, r]));
+    $("ab-chart").innerHTML = ab.profiled.map((row) => {
+      const other = control[row.stage] || { rate: 0, count: 0 };
+      return `<div class="ab-row">
+        <div class="name">${esc(row.label)}</div>
+        <div class="ab-pair">
+          <div class="ab-line" title="Profiled: ${row.rate}% (${row.count} leads)">
+            <div class="ab-track"><div class="ab-fill profiled" style="width:${row.rate}%"></div></div>
+            <div class="val">${row.rate}%</div>
+          </div>
+          <div class="ab-line" title="Control: ${other.rate}% (${other.count} leads)">
+            <div class="ab-track"><div class="ab-fill control" style="width:${other.rate}%"></div></div>
+            <div class="val">${other.rate}%</div>
+          </div>
+        </div>
+      </div>`;
+    }).join("");
+
+    $("ab-note").textContent =
+      "Share of each cohort's leads reaching that stage. Outcome data is an illustrative pilot " +
+      "cohort - during a live pilot these rows come from the brokerage's own CRM.";
+  }
+
+  function renderBands(bands) {
+    const copy = { hot: "handed over now", warm: "consultant follow-up", cold: "nurture" };
+    $("bands").innerHTML = ["hot", "warm", "cold"].map((band) => `
+      <div class="band-stat ${band}">
+        <b>${bands[band] || 0}</b>
+        <span>${band} · ${copy[band]}</span>
+      </div>`).join("");
+  }
+
+  function renderFunnel(funnel) {
+    const max = Math.max(...funnel.map((f) => f.count), 1);
+    $("funnel-chart").innerHTML = bars(funnel.map((f) => ({
+      name: f.step, value: f.count,
+      label: `${f.count} · ${f.pct_of_started}%`,
+      tip: `${f.step}: ${f.count}`,
+    })), max);
+  }
+
+  function renderDemand(demand) {
+    const blocks = [
+      ["Areas requested", demand.areas],
+      ["Budget bands", demand.budgets],
+    ];
+    $("demand").innerHTML = blocks.map(([title, rows]) => {
+      if (!rows.length) return "";
+      const max = Math.max(...rows.map((r) => r.count), 1);
+      return `<h4 style="font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+        text-transform:uppercase;color:var(--ink-3);font-weight:400;margin:0 0 10px">${title}</h4>
+        <div class="bars" style="margin-bottom:20px">${bars(rows.map((r) => ({
+          name: r.label, value: r.count, label: String(r.count),
+        })), max)}</div>`;
+    }).join("");
+  }
+
+  function renderSources(sources) {
+    $("sources").innerHTML = sources.map((s) => `<tr>
+      <td class="num" style="font-size:12px">${esc(s.source)}</td>
+      <td class="num">${s.started}</td>
+      <td class="num">${s.qualified}</td>
+      <td class="num">${s.qualified_rate}%</td>
+    </tr>`).join("");
+  }
+
+  function renderLeads(leads) {
+    $("lead-count").textContent = `${leads.length} leads`;
+    $("leads").innerHTML = leads.map((lead) => `
+      <tr tabindex="0" data-lead="${esc(lead.lead_id)}">
+        <td class="who">${esc(lead.name)}<small>${esc(lead.wa_id)} · ${esc(lead.source)}</small></td>
+        <td>${TYPES[lead.buyer_type] || "—"}</td>
+        <td>${esc([lead.bedrooms && lead.bedrooms + "-bed", lead.unit_type].filter(Boolean).join(" ") || "—")}
+          <small style="display:block;color:var(--ink-3)">${esc(lead.areas.join(", ") || "open")}</small></td>
+        <td class="num">${esc(lead.budget || "—")}</td>
+        <td>${TIMELINES[lead.timeline] || "—"}</td>
+        <td>${INTENTS[lead.intent] || "—"}</td>
+        <td><span class="chip ${lead.band}"><i class="dot"></i>${lead.band} ${lead.score}</span></td>
+        <td>${esc(lead.consultant || "—")}</td>
+      </tr>`).join("");
+
+    $("leads").querySelectorAll("tr").forEach((row) => {
+      row.addEventListener("click", () => openBrief(row.dataset.lead));
+      row.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openBrief(row.dataset.lead);
+        }
+      });
+    });
+  }
+
+  async function openBrief(leadId) {
+    const brief = BOOT.briefs[leadId] || await getJSON(`/api/leads/${leadId}`);
+    if (!brief) return;
+
+    const q = brief.qualification;
+    const s = brief.scoring;
+    $("panel-name").textContent = brief.buyer.name;
+    $("panel-meta").textContent =
+      `${brief.buyer.whatsapp} · ${brief.buyer.source} ${brief.buyer.source_ref} · session ${brief.buyer.sessions}`;
+
+    const facts = [
+      ["Buyer type", q.buyer_type], ["Areas", q.areas.join(", ")],
+      ["Looking for", q.looking_for],
+      ["Status", `${q.property_status} · ${q.delivery}`],
+      ["Budget", q.budget], ["Payment", q.payment],
+      ["Timeline", q.timeline], ["Asked for", q.intent],
+    ];
+    if (q.investor_goal) facts.push(["Investor goal", `${q.investor_goal} · ${q.units_target || "1 unit"}`]);
+    if (brief.consultant) facts.push(["Assigned to", brief.consultant]);
+
+    $("panel-body").innerHTML = `
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:16px">
+        <span class="chip ${s.band}"><i class="dot"></i>${s.band} · score ${s.score}</span>
+        <span style="font-size:13px;color:var(--ink-2)">${esc(s.routing)}</span>
+      </div>
+      <h4>Lead the call with</h4>
+      <ul class="points">${brief.talking_points.map((p) => `<li>${esc(p)}</li>`).join("") ||
+        "<li>No signals captured yet.</li>"}</ul>
+      <h4>Captured profile</h4>
+      <dl class="facts">${facts.map(([k, v]) =>
+        `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
+      <h4>Shortlist shown in chat</h4>
+      ${brief.shortlist.map((u) => `
+        <div class="unit${u.unit_id === brief.selected_unit_id ? " engaged" : ""}">
+          <div class="u-title">${esc(u.project)} · ${esc(u.headline)}</div>
+          <div class="u-meta">${esc(u.unit_id)} · ${esc(u.area)} · ${esc(u.price)}</div>
+          <div class="u-meta">${esc(u.payment)} · ${esc(u.delivery)}</div>
+        </div>`).join("") || "<p style='color:var(--ink-3);font-size:13px'>No units shown.</p>"}
+      <h4>Score breakdown (internal)</h4>
+      <div class="breakdown">${s.breakdown.map((b) =>
+        `<div><span>${esc(b.signal)} <span style="color:var(--ink-3)">— ${esc(b.note)}</span></span>
+         <span class="pts">+${b.points}</span></div>`).join("")}</div>
+      <h4>Transcript</h4>
+      <div class="turns">${brief.transcript.map((t) => `
+        <div class="turn ${t.role}">
+          <div class="role">${t.role === "bot" ? "Bot" : "Buyer"}${t.node ? " · " + esc(t.node) : ""}</div>
+          <p>${esc(t.text)}</p>
+        </div>`).join("")}</div>`;
+
+    $("panel").classList.add("open");
+    $("panel").setAttribute("aria-hidden", "false");
+    $("scrim").classList.add("open");
+    $("panel-close").focus();
+  }
+
+  function closeBrief() {
+    $("panel").classList.remove("open");
+    $("panel").setAttribute("aria-hidden", "true");
+    $("scrim").classList.remove("open");
+  }
+
+  $("panel-close").addEventListener("click", closeBrief);
+  $("scrim").addEventListener("click", closeBrief);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeBrief(); });
+
+  async function boot() {
+    const live = await getJSON("/api/snapshot");
+    const snap = live || BOOT.snapshot;
+    if (!snap) {
+      $("stamp").textContent = "No data. Run: python main.py demo";
+      return;
+    }
+    $("stamp").innerHTML = live
+      ? '<span class="live-dot"></span><b>Live</b><br>reading the running bot'
+      : '<span class="live-dot"></span><b>Prototype snapshot</b><br>generated from scripted conversations';
+    renderKpis(snap.headline);
+    renderAB(snap.ab_test);
+    renderFunnel(snap.funnel);
+    renderBands(snap.headline.bands);
+    renderDemand(snap.demand);
+    renderSources(snap.sources);
+    renderLeads(snap.leads);
+  }
+
+  boot();
+</script>
