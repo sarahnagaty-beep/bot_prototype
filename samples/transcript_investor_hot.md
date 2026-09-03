@@ -1,6 +1,6 @@
 # Investor · rental yield · handed to a consultant
 
-`C-edbe0196` · buyer `+201009876543` · source `meta_ad` · band **hot** (score 8)
+`C-3b1c6048` · buyer `+201009876543` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Omar! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  

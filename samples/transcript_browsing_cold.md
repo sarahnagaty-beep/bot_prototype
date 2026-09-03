@@ -1,6 +1,6 @@
 # Just browsing · cold · exits to nurture
 
-`C-f4f78b29` · buyer `+201556667788` · source `meta_ad` · band **cold** (score 0)
+`C-698e6f89` · buyer `+201556667788` · source `meta_ad` · band **cold** (score 0)
 
 **Bot** `N0`  
 > Hi Dalia! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
