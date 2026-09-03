@@ -128,6 +128,8 @@ verifiable against `samples/`.
 | 11 | Restart resilience | Mid-conversation, restart the service, then reply | Continues from the same question — does not start over |
 | 12 | Duplicate delivery | Poor signal / Meta retry | Buyer is answered once, never twice |
 | 13 | Brief quality | Open any hot lead in the dashboard | Talking points, captured profile, shortlist, score breakdown and full transcript all match the chat |
+| 14 | Region routing | Complete a North Coast flow | Only coastal stock is offered; the lead is assigned to a North Coast agent |
+| 15 | Queue at scale | `python main.py scale`, then filter the queue by region and band, and search a consultant's name | Counts update, paging works, and the totals match the filters |
 
 ### What to record
 
@@ -153,7 +155,12 @@ lead's full history is one click away in the dashboard.
   buyer's last message. The Node 10 nurture follow-ups need approved message
   templates before they can actually send.
 - **Single instance.** Session state is a JSON file. Fine for UAT; a pilot on real
-  ad volume needs a database.
+  ad volume needs a database. `python main.py scale` writes tens of megabytes.
+- **Band calibration.** On generated volume, roughly 60% of qualified leads land in
+  the hot band, because the scoring table in the conversation prototype gives budget,
+  payment readiness and completion 5 points before timeline is counted. A floor cannot
+  treat 60% of leads as immediate handoffs — retuning the weights against real
+  judgement is an explicit UAT outcome (exit criterion 3).
 
 ## Exit criteria
 

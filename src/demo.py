@@ -27,9 +27,9 @@ SCENARIOS: list[dict[str, Any]] = [
         "title": "End user · hot lead · books a viewing",
         "wa_id": "+201001234567",
         "name": "Hana Mostafa",
-        "source_ref": "IG_LEADGEN_NEWCAIRO_Q3",
+        "source_ref": "IG_LEADGEN_CAIROEAST_Q3",
         "replies": [
-            "Yes, let's go", "Buy to live in", "New Cairo", "Apartment", "3 bedrooms",
+            "Yes, let's go", "Buy to live in", "Cairo East", "New Cairo", "Apartment", "3 bedrooms",
             "Primary", "Off-plan", "7-12M", "Installments", "15%", "Quarterly",
             "Backloaded", "ASAP", "Yes, show me", "Book a viewing",
         ],
@@ -50,9 +50,9 @@ SCENARIOS: list[dict[str, Any]] = [
         "title": "End user · warm · brochure, nurtured not handed off",
         "wa_id": "+201112223344",
         "name": "Ahmed Sobhy",
-        "source_ref": "IG_LEADGEN_OCTOBER_Q3",
+        "source_ref": "IG_LEADGEN_CAIROWEST_Q3",
         "replies": [
-            "yes", "buy to live in", "6th October", "apartment", "3", "primary",
+            "yes", "buy to live in", "Cairo West", "6th October", "apartment", "3", "primary",
             "either", "4-7M", "installments", "10%", "monthly", "equal",
             "3-6 months", "no thanks", "get full brochure",
         ],
@@ -66,7 +66,7 @@ SCENARIOS: list[dict[str, Any]] = [
         "source": "website",
         "replies": [
             "sure", "it's for me and my family", "somewhere near the coast",
-            "chalet", "2 bedrooms", "resale is fine", "ready to move",
+            "Ras El Hekma", "chalet", "2 bedrooms", "resale is fine", "ready to move",
             "around 6 million", "cash", "this month", "book a viewing",
         ],
     },
@@ -75,7 +75,7 @@ SCENARIOS: list[dict[str, Any]] = [
         "title": "Just browsing · cold · exits to nurture",
         "wa_id": "+201556667788",
         "name": "Dalia Hassan",
-        "source_ref": "IG_LEADGEN_BRAND_Q3",
+        "source_ref": "IG_LEADGEN_CAIROWEST_Q3",
         "replies": ["I'm just browsing", "Yes, save them"],
     },
     {
@@ -85,7 +85,7 @@ SCENARIOS: list[dict[str, Any]] = [
         "name": "Nada Kamal",
         "source_ref": "IG_LEADGEN_NORTHCOAST_Q3",
         "replies": [
-            "yes", "buy to live in", "North Coast", "villa", "4+", "resale",
+            "yes", "buy to live in", "North Coast", "anywhere", "villa", "4+", "resale",
             "ready to move", "under 4M", "installments", "10%", "monthly",
             "equal", "just exploring", "widen the search", "get full brochure",
         ],
@@ -106,7 +106,7 @@ SCENARIOS: list[dict[str, Any]] = [
         "title": "Broker · routed to the Broker Bot",
         "wa_id": "+201889990011",
         "name": "Mahmoud Fathy",
-        "source_ref": "IG_LEADGEN_BRAND_Q3",
+        "source_ref": "IG_LEADGEN_CAIROWEST_Q3",
         "replies": ["yes", "I'm a broker"],
     },
     {
@@ -114,10 +114,10 @@ SCENARIOS: list[dict[str, Any]] = [
         "title": "After hours · handoff promises a morning call",
         "wa_id": "+201990001122",
         "name": "Yara Selim",
-        "source_ref": "FB_LEADGEN_ZAYED_Q3",
+        "source_ref": "FB_LEADGEN_CAIROWEST_Q3",
         "now_hour": 23,
         "replies": [
-            "yes", "buy to live in", "Sheikh Zayed", "townhouse", "4+", "both",
+            "yes", "buy to live in", "Cairo West", "Sheikh Zayed", "townhouse", "4+", "both",
             "either", "12-20M", "cash", "asap", "express interest",
         ],
     },
@@ -204,12 +204,26 @@ def seed_pilot_outcomes(
             stage = nxt
         return stage
 
-    for i in range(profiled):
-        crm.record_outcome(f"P-{i:04d}", "profiled", walk("profiled"))
-    for i in range(control):
-        crm.record_outcome(f"C-{i:04d}", "control", walk("control"))
+    # One save at the end: writing the whole store per row turns a seconds-long
+    # job into a minutes-long one once the store holds thousands of leads.
+    with crm.bulk():
+        for i in range(profiled):
+            crm.record_outcome(f"P-{i:05d}", "profiled", walk("profiled"))
+        _record_real_leads(crm)
 
-    # Real bot leads join the profiled arm at the stage they actually reached.
+        # Match the arms: the real bot leads join the profiled side, so the
+        # control cohort is sized to what the profiled arm actually holds.
+        # An uneven A/B invites the reader to argue with the sample, not the
+        # result.
+        profiled_total = sum(
+            1 for row in crm.outcomes() if row.get("cohort") == "profiled"
+        )
+        for i in range(max(control, profiled_total)):
+            crm.record_outcome(f"C-{i:05d}", "control", walk("control"))
+
+
+def _record_real_leads(crm: CRM) -> None:
+    """Bot leads join the profiled arm at the stage they actually reached."""
     for lead in crm.leads():
         profile = lead["profile"]
         if profile.get("consultant"):
@@ -219,3 +233,4 @@ def seed_pilot_outcomes(
         else:
             stage = "lead"
         crm.record_outcome(lead["lead_id"], "profiled", stage, {"real": True})
+

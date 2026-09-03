@@ -24,19 +24,29 @@ BLOCK = re.compile(
 )
 
 
-def bootstrap_payload(crm: CRM) -> dict:
+# A published page carries its own data, so the queue it embeds is capped:
+# aggregates cover every lead, the table shows the top slice.
+EMBEDDED_LEADS = 150
+
+
+def bootstrap_payload(crm: CRM, lead_limit: int = EMBEDDED_LEADS) -> dict:
     units = load_units()
+    snapshot = metrics.snapshot(crm, lead_limit=lead_limit)
+    shown = {row["lead_id"] for row in snapshot["leads"]}
+
     briefs = {}
     for lead in crm.leads():
+        if lead["lead_id"] not in shown:
+            continue
         profile = BuyerProfile.from_dict(lead["profile"])
         briefs[lead["lead_id"]] = build_brief(
             profile, units, crm.transcript(lead["conversation_id"])
         )
-    return {"snapshot": metrics.snapshot(crm), "briefs": briefs}
+    return {"snapshot": snapshot, "briefs": briefs}
 
 
-def embed(crm: CRM, path: Path = DASHBOARD) -> Path:
-    payload = json.dumps(bootstrap_payload(crm), ensure_ascii=False)
+def embed(crm: CRM, path: Path = DASHBOARD, lead_limit: int = EMBEDDED_LEADS) -> Path:
+    payload = json.dumps(bootstrap_payload(crm, lead_limit), ensure_ascii=False)
     html = path.read_text()
     if not BLOCK.search(html):
         raise RuntimeError("bootstrap-data block not found in dashboard/index.html")

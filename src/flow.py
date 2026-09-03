@@ -21,7 +21,10 @@ from typing import Any, Callable, Optional
 from . import inventory as inv
 from . import nlu
 from .crm import CRM
-from .models import AREA_LABELS, BuyerProfile, Card, Message, QuickReply, TranscriptEntry, Unit
+from .models import (
+    AREA_LABELS, REGIONS, BuyerProfile, Card, Message, QuickReply, TranscriptEntry, Unit,
+    region_label,
+)
 from .scoring import apply_score, routing_for
 
 ENDED = "__end__"
@@ -36,11 +39,16 @@ BUDGET_BANDS = {
 }
 
 
+Options = list[tuple[str, str]]
+
+
 @dataclass
 class Ask:
     node: str
     prompt: Callable[["Engine"], str]
-    options: list[tuple[str, str]]
+    # A list, or a function of the conversation so far (the compounds offered
+    # depend on the region the buyer just picked).
+    options: Options | Callable[["Engine"], Options]
     next: Callable[["Engine", str], str]
     field: Optional[str] = None
     capture: Optional[Callable[["Engine", str], None]] = None
@@ -194,12 +202,15 @@ class Engine:
 
     # -- internals ----------------------------------------------------------
 
+    def options_for(self, ask: Ask) -> Options:
+        return ask.options(self) if callable(ask.options) else ask.options
+
     def _interpret(self, ask: Ask, text: str) -> tuple[Optional[str], float]:
         if ask.parse:
             value, confidence = ask.parse(self, text)
             if value is not None:
                 return value, confidence
-        return nlu.resolve(text, [value for _, value in ask.options])
+        return nlu.resolve(text, [value for _, value in self.options_for(ask)])
 
     def _fallback(self, ask: Ask, text: str) -> list[Message]:
         """Node 11 - two low-confidence turns, then offer a human."""
@@ -215,7 +226,7 @@ class Engine:
         return self._emit(
             Message.choice(
                 "Sorry - I didn't catch that. Pick one of these and we'll keep moving:",
-                [QuickReply(label, value) for label, value in ask.options],
+                [QuickReply(label, value) for label, value in self.options_for(ask)],
                 node="N11",
             ),
         )
@@ -245,13 +256,14 @@ class Engine:
                 ask = ASKS[node]
                 self.awaiting = node
                 self.profile.last_node = node
+                options = self.options_for(ask)
                 self._emit(
                     Message.choice(
                         ask.prompt(self),
-                        [QuickReply(label, value) for label, value in ask.options],
+                        [QuickReply(label, value) for label, value in options],
                         node=node,
                     )
-                    if ask.options
+                    if options
                     else Message.text_msg(ask.prompt(self), node=node)
                 )
                 self.crm.upsert_profile(self.profile)
@@ -302,11 +314,27 @@ def _render(message: Message) -> str:
 # Capture helpers
 # ==========================================================================
 
-def _capture_area(engine: Engine, value: str) -> None:
+def _capture_region(engine: Engine, value: str) -> None:
     if value == "not_sure":
+        return
+    engine.profile.region = value
+    engine.profile.preferred_areas = []
+
+
+def _capture_area(engine: Engine, value: str) -> None:
+    """"Anywhere in <region>" leaves the compounds open and matches region-wide."""
+    if value in ("any", "not_sure"):
         return
     if value not in engine.profile.preferred_areas:
         engine.profile.preferred_areas.append(value)
+
+
+def _area_options(engine: Engine) -> Options:
+    region = engine.profile.region
+    areas = REGIONS.get(region, {}).get("areas", [])
+    return [(f"Anywhere in {region_label(region)}", "any")] + [
+        (AREA_LABELS.get(area, area), area) for area in areas
+    ]
 
 
 def _capture_budget(engine: Engine, value: str) -> None:
@@ -345,14 +373,14 @@ def _capture_down_payment(engine: Engine, value: str) -> None:
 def _capture_priority(engine: Engine, value: str) -> None:
     """Node 2 'Not sure' branch - infer areas from what matters most."""
     engine.profile.area_priority = value
-    inferred = {
-        "work": ["new_cairo", "sheikh_zayed"],
-        "schools": ["new_cairo", "sheikh_zayed"],
-        "coast": ["north_coast"],
-        "quiet": ["6th_october", "sheikh_zayed"],
-        "value": ["6th_october"],
-    }.get(value, [])
-    engine.profile.preferred_areas = inferred
+    engine.profile.region = {
+        "work": "cairo_east",
+        "schools": "cairo_east",
+        "coast": "north_coast",
+        "quiet": "cairo_west",
+        "value": "cairo_west",
+    }.get(value, "")
+    engine.profile.preferred_areas = []
 
 
 # ==========================================================================
@@ -403,16 +431,23 @@ _ask(Ask(
 
 _ask(Ask(
     node="N2",
-    prompt=lambda e: "Which area are you interested in?",
+    prompt=lambda e: "Which part of the market are you looking at?",
     options=[
-        ("New Cairo", "new_cairo"),
-        ("Sheikh Zayed", "sheikh_zayed"),
+        ("Cairo East", "cairo_east"),
+        ("Cairo West", "cairo_west"),
         ("North Coast", "north_coast"),
-        ("6th October", "6th_october"),
         ("Not sure yet", "not_sure"),
     ],
+    capture=_capture_region,
+    next=lambda e, v: "N2_PRIORITY" if v == "not_sure" else "N2_AREA",
+))
+
+_ask(Ask(
+    node="N2_AREA",
+    prompt=lambda e: f"Anywhere in particular in {region_label(e.profile.region)}?",
+    options=_area_options,
     capture=_capture_area,
-    next=lambda e, v: "N2_PRIORITY" if v == "not_sure" else "N2_TYPE",
+    next=lambda e, v: "N2_TYPE",
 ))
 
 _ask(Ask(
@@ -426,7 +461,7 @@ _ask(Ask(
         ("Best value", "value"),
     ],
     capture=_capture_priority,
-    next=lambda e, v: "N2_TYPE",
+    next=lambda e, v: "N2_AREA" if e.profile.region else "N2_TYPE",
 ))
 
 _ask(Ask(
@@ -796,10 +831,13 @@ def _handoff(engine: Engine) -> str:
     """Node 9 - rotation assignment, transcript passed with the lead."""
     consultant = engine.crm.assign_consultant(engine.profile)
     engine.profile.consultant = consultant["name"]
+    engine.profile.consultant_id = consultant.get("agent_id", "")
+    engine.profile.consultant_team = consultant.get("team", "")
     engine.crm.write_lead(engine.profile, engine.conversation_id)
     engine.crm.log_event(
         "handoff", engine.conversation_id, engine.profile.wa_id,
-        {"consultant": consultant["name"], "team": consultant["team"],
+        {"consultant": consultant["name"], "team": consultant.get("team", ""),
+         "agent_id": consultant.get("agent_id", ""), "region": consultant.get("region", ""),
          "band": engine.profile.band, "intent": engine.profile.intent_action},
     )
     if engine.after_hours:

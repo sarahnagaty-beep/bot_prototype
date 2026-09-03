@@ -1,6 +1,6 @@
 # End user · warm · brochure, nurtured not handed off
 
-`C-8de2d59f` · buyer `+201112223344` · source `meta_ad` · band **warm** (score 5)
+`C-41ffa0da` · buyer `+201112223344` · source `meta_ad` · band **warm** (score 5)
 
 **Bot** `N0`  
 > Hi Ahmed! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -17,10 +17,17 @@
 > buy to live in
 
 **Bot** `N2`  
-> Which area are you interested in?  
-> [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+> Which part of the market are you looking at?  
+> [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer** `N2`  
+> Cairo West
+
+**Bot** `N2_AREA`  
+> Anywhere in particular in Cairo West?  
+> [Anywhere in Cairo West] [Sheikh Zayed] [6th October] [Zayed North]
+
+**Buyer** `N2_AREA`  
 > 6th October
 
 **Bot** `N2_TYPE`  
@@ -97,9 +104,9 @@
 > Based on what you told me, here are your best matches - swipe through:  
 > - Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027  
 > - Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move  
+> - Cairo Gate East · 2-bed apartment | 128 m² · Mostakbal City · primary | 5.6M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027  
 > - Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move  
-> - West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027  
-> - Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027
+> - Alamein Towers · 2-bed apartment | 120 m² · New Alamein · primary | 6.8M EGP | 20% down, ~90K/mo (monthly, equal) | ready to move
 
 **Bot** `N8`  
 > What would you like to do next?  

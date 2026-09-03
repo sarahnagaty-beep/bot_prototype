@@ -10,7 +10,8 @@ UNITS = load_units()
 
 def _end_user() -> BuyerProfile:
     return BuyerProfile(
-        buyer_type="end_user", preferred_areas=["new_cairo"], unit_type="apartment",
+        buyer_type="end_user", region="cairo_east", preferred_areas=["new_cairo"],
+        unit_type="apartment",
         bedrooms="3", property_status="primary", delivery_preference="off_plan",
         budget_band="7-12M", budget_min=7_000_000, budget_max=12_000_000,
         payment_type="installments", down_payment_pct=10,
@@ -43,7 +44,7 @@ def test_investor_yield_goal_favours_ready_stock():
 
 def test_widening_keeps_the_home_type_the_buyer_asked_for():
     profile = BuyerProfile(
-        preferred_areas=["north_coast"], unit_type="villa", bedrooms="4+",
+        region="north_coast", unit_type="villa", bedrooms="4+",
         property_status="resale", delivery_preference="ready",
         budget_band="Under 4M", budget_min=0, budget_max=4_000_000,
     )
@@ -62,7 +63,7 @@ def test_upsell_is_priced_just_above_the_shortlist():
 
 def test_budget_below_entry_price_is_not_realistic():
     profile = BuyerProfile(
-        preferred_areas=["new_cairo"], unit_type="villa",
+        region="cairo_east", preferred_areas=["new_cairo"], unit_type="villa",
         budget_band="Under 4M", budget_max=4_000_000,
     )
     assert budget_is_realistic(profile, UNITS) is False

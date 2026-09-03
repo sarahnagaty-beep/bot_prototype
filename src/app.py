@@ -8,7 +8,9 @@ Endpoints
     GET  /webhook               Meta verification handshake
     POST /webhook               inbound WhatsApp messages
     GET  /api/snapshot          every metric the dashboard renders
+    GET  /api/leads             one filtered, paginated page of the lead queue
     GET  /api/leads/{lead_id}   full buyer brief + transcript
+    GET  /api/floor             team and agent rollups
     GET  /api/inventory         the sample inventory feed
     POST /api/simulate          run a scripted conversation (demo button)
 """
@@ -80,6 +82,26 @@ def health() -> JSONResponse:
 def snapshot() -> JSONResponse:
     crm.load()
     return JSONResponse(metrics.snapshot(crm))
+
+
+@app.get("/api/leads")
+def leads(
+    query: str = "", band: str = "", region: str = "", team: str = "",
+    buyer_type: str = "", sort: str = "score", page: int = 1, page_size: int = 25,
+) -> JSONResponse:
+    """The lead queue is paginated: a floor of hundreds of agents produces
+    thousands of leads, and no browser wants them in one response."""
+    crm.load()
+    return JSONResponse(metrics.lead_page(
+        crm, query=query, band=band, region=region, team=team,
+        buyer_type=buyer_type, sort=sort, page=page, page_size=page_size,
+    ))
+
+
+@app.get("/api/floor")
+def floor() -> JSONResponse:
+    crm.load()
+    return JSONResponse(metrics.floor(crm))
 
 
 @app.get("/api/leads/{lead_id}")

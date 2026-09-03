@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import threading
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
@@ -19,13 +20,25 @@ from typing import Any, Optional
 from .models import BuyerProfile, TranscriptEntry
 
 DEFAULT_STORE = Path(__file__).resolve().parent.parent / "data" / "store.json"
+AGENTS_FILE = Path(__file__).resolve().parent.parent / "data" / "agents.json"
 
-CONSULTANTS = [
-    {"name": "Mariam Fahmy", "team": "New Cairo pod A"},
-    {"name": "Youssef Adel", "team": "New Cairo pod B"},
-    {"name": "Nour Ibrahim", "team": "West Cairo pod"},
-    {"name": "Karim Saleh", "team": "Coast pod"},
+# Used only when there is no roster file - a floor of four is not a floor.
+FALLBACK_AGENTS = [
+    {"agent_id": "A-00001", "name": "Mariam Fahmy", "team": "Cairo East · Pod 1",
+     "team_id": "cairo_east-pod-1", "region": "cairo_east", "seniority": "senior"},
+    {"agent_id": "A-00002", "name": "Nour Ibrahim", "team": "Cairo West · Pod 1",
+     "team_id": "cairo_west-pod-1", "region": "cairo_west", "seniority": "mid"},
+    {"agent_id": "A-00003", "name": "Karim Saleh", "team": "North Coast · Pod 1",
+     "team_id": "north_coast-pod-1", "region": "north_coast", "seniority": "mid"},
 ]
+
+
+def load_roster(path: Path = AGENTS_FILE) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """(agents, teams) - the sales floor the leads are assigned across."""
+    if not path.exists():
+        return list(FALLBACK_AGENTS), []
+    raw = json.loads(path.read_text())
+    return raw.get("agents", []), raw.get("teams", [])
 
 
 def _now() -> str:
@@ -38,6 +51,12 @@ class CRM:
     def __init__(self, path: Path | str = DEFAULT_STORE):
         self.path = Path(path)
         self._lock = threading.Lock()
+        self._defer_saves = False
+        self._outcome_index: Optional[dict[str, int]] = None
+        self.agents, self.teams = load_roster()
+        self._agents_by_region: dict[str, list[dict[str, Any]]] = {}
+        for agent in self.agents:
+            self._agents_by_region.setdefault(agent["region"], []).append(agent)
         self._data: dict[str, Any] = {
             "profiles": {},
             "leads": [],
@@ -59,7 +78,23 @@ class CRM:
             except json.JSONDecodeError:
                 pass
 
+    @contextmanager
+    def bulk(self):
+        """Suspend writes for the duration - one save at the end.
+
+        Generating thousands of leads writes the whole store per event
+        otherwise, which turns a seconds-long job into a minutes-long one.
+        """
+        self._defer_saves = True
+        try:
+            yield self
+        finally:
+            self._defer_saves = False
+            self.save()
+
     def save(self) -> None:
+        if self._defer_saves:
+            return
         with self._lock:
             self.path.parent.mkdir(parents=True, exist_ok=True)
             self.path.write_text(json.dumps(self._data, indent=2, ensure_ascii=False))
@@ -129,12 +164,32 @@ class CRM:
     # -- lead engine --------------------------------------------------------
 
     def assign_consultant(self, profile: BuyerProfile) -> dict[str, Any]:
-        """Round-robin rotation; a real deployment would weight by area and load."""
-        idx = self._data.get("rotation_index", 0) % len(CONSULTANTS)
-        self._data["rotation_index"] = idx + 1
-        consultant = CONSULTANTS[idx]
+        """Assign within the buyer's region, to whoever is carrying least.
+
+        Round-robin across the whole floor would hand a North Coast buyer to a
+        Cairo West agent, and would pile onto whoever happens to be next in a
+        list of hundreds. Load is tracked per agent so the queue stays even.
+        """
+        pool = self._agents_by_region.get(profile.region) or self.agents
+        if not pool:
+            return {"name": "", "team": "", "agent_id": "", "region": ""}
+
+        load = self._data.setdefault("assignment_load", {})
+        # Least-loaded first; the rotation index breaks ties so equal-load
+        # agents are still taken in turn rather than always the first one.
+        offset = self._data.get("rotation_index", 0)
+        ordered = sorted(
+            range(len(pool)),
+            key=lambda i: (load.get(pool[i]["agent_id"], 0), (i + offset) % len(pool)),
+        )
+        agent = pool[ordered[0]]
+        load[agent["agent_id"]] = load.get(agent["agent_id"], 0) + 1
+        self._data["rotation_index"] = offset + 1
         self.save()
-        return consultant
+        return agent
+
+    def agent_load(self) -> dict[str, int]:
+        return dict(self._data.get("assignment_load", {}))
 
     # -- events (funnel telemetry for the dashboard) ------------------------
 
@@ -169,15 +224,19 @@ class CRM:
         In a live pilot these arrive from the brokerage CRM; the profiled and
         control cohorts are compared on the same stages.
         """
-        self._data.setdefault("outcomes", [])
-        for row in self._data["outcomes"]:
-            if row["lead_id"] == lead_id:
-                row.update({"stage": stage, "cohort": cohort, "at": _now(), **(extra or {})})
-                self.save()
-                return
-        self._data["outcomes"].append(
-            {"lead_id": lead_id, "cohort": cohort, "stage": stage, "at": _now(), **(extra or {})}
-        )
+        rows = self._data.setdefault("outcomes", [])
+        # Index by lead so seeding thousands of rows stays linear.
+        if self._outcome_index is None or len(self._outcome_index) != len(rows):
+            self._outcome_index = {row["lead_id"]: i for i, row in enumerate(rows)}
+
+        record = {"lead_id": lead_id, "cohort": cohort, "stage": stage,
+                  "at": _now(), **(extra or {})}
+        existing = self._outcome_index.get(lead_id)
+        if existing is not None:
+            rows[existing].update(record)
+        else:
+            self._outcome_index[lead_id] = len(rows)
+            rows.append(record)
         self.save()
 
     def outcomes(self) -> list[dict[str, Any]]:

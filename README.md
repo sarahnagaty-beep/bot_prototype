@@ -10,6 +10,7 @@ It runs end to end offline — no WhatsApp credentials, no CRM, no API keys.
 ```bash
 pip install -r requirements.txt
 python main.py demo      # run every scenario, write samples/, refresh the dashboard
+python main.py scale     # add 3,000 generated conversations across a 632-agent floor
 python main.py chat      # talk to the bot in your terminal
 python main.py serve     # webhook + dashboard at http://localhost:8000
 ```
@@ -22,12 +23,30 @@ python main.py serve     # webhook + dashboard at http://localhost:8000
 | Language understanding | `src/nlu.py` | Buttons *and* free text ("around 10 million", "near the coast") |
 | Qualification scoring | `src/scoring.py` | The §3 signal table → Cold / Warm (MQL) / Hot (SQL) |
 | Inventory matching | `src/inventory.py` | Ranked best-fit, widening, the Node 7 upsell |
-| CRM / profile store | `src/crm.py` | Returning-buyer retrieval, lead writes, consultant rotation, event log |
+| CRM / profile store | `src/crm.py` | Returning-buyer retrieval, lead writes, region-aware assignment, event log |
+| Floor + volume data | `src/scale.py`, `scripts/make_agents.py` | A 600-agent roster and thousands of real generated conversations |
 | Buyer brief | `src/brief.py` | What the consultant reads before dialling |
 | WhatsApp adapter | `src/whatsapp.py` | Cloud API payloads: buttons, list messages, unit cards |
 | Service | `src/app.py` | Meta webhook + the dashboard's read API |
 | Dashboard | `dashboard/index.html` | Floor + leadership view (see below) |
 | Sample output | `samples/` | Transcript and brief for every branch |
+
+## Locations
+
+The market is segmented the way brokerages segment their floors — **Cairo East, Cairo
+West, North Coast** — with compounds inside each:
+
+| Region | Compounds |
+|---|---|
+| Cairo East | New Cairo, Mostakbal City, New Capital, Madinaty |
+| Cairo West | Sheikh Zayed, 6th October, Zayed North |
+| North Coast | Sidi Abdel Rahman, Ras El Hekma, New Alamein |
+
+The bot asks for the region, then offers the compounds inside it (or "anywhere in
+Cairo East", which keeps the whole region in play). Every dashboard rollup aggregates
+to the three regions; leads are assigned to an agent working that region. Investors
+are never asked — the script routes them on returns, so they appear as their own row
+in the breakdown rather than being dropped from it.
 
 ## The conversation
 
@@ -89,15 +108,28 @@ The product's actual output. `python main.py brief L-234567`:
 
 `python main.py serve`, then <http://localhost:8000>. Two audiences, one page:
 
-- **The floor** — a lead queue ranked by score, with band chips for routing, and the full
-  brief (talking points, captured profile, shortlist, score breakdown, transcript) one
-  click away.
-- **Leadership** — the conversation funnel, demand data the brokerage never had before
-  (which areas and budgets buyers actually ask for), source attribution by campaign, and
-  the profiled-vs-control conversion panel the pilot is sold on.
+- **The floor** — a searchable, filterable, paginated lead queue with band chips for
+  routing, and the full brief (talking points, captured profile, shortlist, score
+  breakdown, transcript) one click away.
+- **Leadership** — the conversation funnel, weekly volume, demand by region, team
+  performance across the floor, source attribution by campaign, and the
+  profiled-vs-control conversion panel the pilot is sold on.
 
-The dashboard reads `/api/snapshot` when the service is running and falls back to a data
-snapshot embedded in the file, so `dashboard/index.html` also opens straight from disk.
+**It is built for a floor of thousands, and the demo data is generated at that size**
+so the design is tested against it rather than against seven rows. `python main.py
+scale` runs 3,000 real conversations across a 632-agent roster (`data/agents.json`,
+regenerate with `scripts/make_agents.py --agents 1500`). At that volume:
+
+- aggregates are computed over every lead; the queue is a paginated window onto them
+- the queue filters by region, band and buyer type, and searches name, number,
+  campaign, consultant, team and compound
+- the floor view rolls up to teams — a thousand-row agent list is not a view — and
+  leads are assigned inside the buyer's own region to whoever is carrying least
+
+The dashboard reads `/api/snapshot` and `/api/leads` when the service is running, and
+falls back to a snapshot embedded in the file, so `dashboard/index.html` also opens
+straight from disk. The embedded copy carries the aggregates for every lead plus the
+150 most recent rows.
 
 ## Running UAT
 
@@ -136,6 +168,10 @@ the dashboard.
 
 - `data/inventory.json` — illustrative sample stock; projects, developers and prices are
   placeholders shaped like Egyptian primary/resale inventory. Replace with a live feed.
+- `data/agents.json` — a synthetic roster. Names are generated; the shape (pods of ~22
+  under a team leader, split across the three regions) matches a Tier 2 floor.
+- The generated conversations in `src/scale.py` sample *answers*, not results: every
+  score, shortlist and brief is computed by the same engine a live buyer drives.
 - `src/crm.py` — a JSON file stands in for the brokerage's CRM. Swapping in a real one
   means reimplementing that class, not touching the flow.
 - Pilot outcome rates in the A/B panel (`seed_pilot_outcomes`) are simulated, since a
@@ -157,5 +193,5 @@ the dashboard.
 ## Tests
 
 ```bash
-python -m pytest tests/ -q      # 43 tests: scoring, matching, the flow, adapter, API
+python -m pytest tests/ -q      # 46 tests: scoring, matching, the flow, adapter, API, scale
 ```

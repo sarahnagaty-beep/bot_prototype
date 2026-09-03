@@ -9,7 +9,7 @@
 - Status / delivery: Open · Open
 - Budget: Not stated · Payment: Not stated
 - Timeline: Not stated · Asked for: None yet
-- Assigned to: Karim Saleh
+- Assigned to: Youssef Elwy
 
 ## Score breakdown (internal)
 
@@ -36,4 +36,4 @@
 
 **Buyer:** talk to a consultant
 
-**Bot:** You're now with Karim Saleh, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+**Bot:** You're now with Youssef Elwy, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

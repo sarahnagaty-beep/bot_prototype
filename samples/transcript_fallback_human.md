@@ -1,6 +1,6 @@
 # Two low-confidence turns · escalated to a human
 
-`C-2ac8fc0a` · buyer `+201778889900` · source `qr` · band **cold** (score 0)
+`C-7a5a7e07` · buyer `+201778889900` · source `qr` · band **cold** (score 0)
 
 **Bot** `N0`  
 > Hi Karim! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -31,4 +31,4 @@
 > talk to a consultant
 
 **Bot** `N9`  
-> You're now with Karim Saleh, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+> You're now with Youssef Elwy, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

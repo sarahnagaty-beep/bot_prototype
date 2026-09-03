@@ -7,7 +7,7 @@ from src.simulator import run_script
 UNITS = load_units()
 
 HOT_END_USER = [
-    "Yes, let's go", "Buy to live in", "New Cairo", "Apartment", "3", "Primary",
+    "Yes, let's go", "Buy to live in", "Cairo East", "New Cairo", "Apartment", "3", "Primary",
     "Off-plan", "7-12M", "Installments", "15%", "Quarterly", "Backloaded", "ASAP",
     "No thanks", "Book a viewing",
 ]
@@ -25,6 +25,7 @@ def test_hot_end_user_is_scored_shortlisted_and_handed_off(crm):
     profile = engine.profile
     assert profile.band == "hot" and profile.score >= 6
     assert profile.buyer_type == "end_user"
+    assert profile.region == "cairo_east"
     assert profile.preferred_areas == ["new_cairo"]
     assert profile.payment_frequency == "quarterly" and profile.payment_structure == "backloaded"
     assert profile.intent_action == "viewing"
@@ -35,13 +36,14 @@ def test_hot_end_user_is_scored_shortlisted_and_handed_off(crm):
 
 def test_free_text_answers_are_understood_without_buttons(crm):
     engine = run(crm, [
-        "sure", "it's for me and my family", "somewhere near the coast", "chalet",
+        "sure", "it's for me and my family", "somewhere near the coast", "anywhere", "chalet",
         "2 bedrooms", "resale is fine", "ready to move", "around 6 million", "cash",
         "this month", "book a viewing",
     ])
     profile = engine.profile
     assert profile.buyer_type == "end_user"
-    assert profile.preferred_areas == ["north_coast"]
+    assert profile.region == "north_coast"
+    assert not profile.preferred_areas  # "anywhere" keeps the whole region in play
     assert profile.unit_type == "chalet" and profile.bedrooms == "2"
     assert profile.budget_band == "4-7M"
     assert profile.payment_type == "cash" and profile.timeline == "asap"
@@ -97,7 +99,7 @@ def test_stop_opts_the_buyer_out_at_any_point(crm):
 
 
 def test_no_match_offers_widening_then_an_alert(crm):
-    engine = run(crm, ["yes", "buy to live in", "North Coast", "villa", "4+", "resale",
+    engine = run(crm, ["yes", "buy to live in", "North Coast", "anywhere", "villa", "4+", "resale",
                        "ready to move", "under 4M", "cash", "just exploring",
                        "widen the search", "get full brochure"])
     assert any(e["event"] == "alert_registered" for e in crm.events())
@@ -105,7 +107,7 @@ def test_no_match_offers_widening_then_an_alert(crm):
 
 
 def test_after_hours_handoff_promises_a_morning_call(crm):
-    engine = run(crm, ["yes", "buy to live in", "Sheikh Zayed", "townhouse", "4+", "both",
+    engine = run(crm, ["yes", "buy to live in", "Cairo West", "Sheikh Zayed", "townhouse", "4+", "both",
                        "either", "12-20M", "cash", "asap", "express interest"], now_hour=23)
     last = crm.transcript(engine.conversation_id)[-1]["text"]
     assert "offline right now" in last

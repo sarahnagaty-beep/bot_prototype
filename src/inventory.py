@@ -52,6 +52,8 @@ def fit_score(unit: Unit, profile: BuyerProfile) -> Optional[float]:
 
     if profile.preferred_areas:
         weigh(1.0 if unit.area in profile.preferred_areas else 0.0, 2.5)
+    elif profile.region:
+        weigh(1.0 if unit.region == profile.region else 0.0, 2.5)
     if profile.unit_type:
         weigh(1.0 if unit.unit_type == profile.unit_type else 0.3, 2.0)
     if profile.bedrooms:
@@ -80,8 +82,15 @@ def fit_score(unit: Unit, profile: BuyerProfile) -> Optional[float]:
 
 
 def satisfies_hard_filters(unit: Unit, profile: BuyerProfile) -> bool:
-    """Stated area / status / delivery preferences are filters, not tiebreakers."""
-    if profile.preferred_areas and unit.area not in profile.preferred_areas:
+    """Stated location / status / delivery preferences are filters, not tiebreakers.
+
+    A buyer who named compounds is filtered on those; one who only picked a
+    region is filtered on the whole region.
+    """
+    if profile.preferred_areas:
+        if unit.area not in profile.preferred_areas:
+            return False
+    elif profile.region and unit.region != profile.region:
         return False
     if profile.property_status and profile.property_status != "both":
         if unit.property_status != profile.property_status:
@@ -118,6 +127,7 @@ def widen(profile: BuyerProfile, units: Optional[list[Unit]] = None, limit: int 
     units = units if units is not None else load_units()
     relaxed = BuyerProfile.from_dict(profile.to_dict())
     relaxed.preferred_areas = []
+    relaxed.region = ""
     relaxed.delivery_preference = "either"
     relaxed.property_status = "both"
     if relaxed.budget_max:
@@ -149,6 +159,8 @@ def next_best(
         if not (top_price < unit.price_egp <= top_price * 1.25):
             continue
         if profile.preferred_areas and unit.area not in profile.preferred_areas:
+            continue
+        if not profile.preferred_areas and profile.region and unit.region != profile.region:
             continue
         candidates.append(unit)
     if not candidates:
@@ -207,14 +219,21 @@ def budget_is_realistic(profile: BuyerProfile, units: Optional[list[Unit]] = Non
     pool = [
         u
         for u in units
-        if (not profile.preferred_areas or u.area in profile.preferred_areas)
-        and (not profile.unit_type or u.unit_type == profile.unit_type)
+        if _in_scope(u, profile) and (not profile.unit_type or u.unit_type == profile.unit_type)
     ]
     if not pool:
         pool = units
     entry = min(u.price_egp for u in pool)
     ceiling = profile.budget_max if profile.budget_max is not None else float("inf")
     return ceiling >= entry
+
+
+def _in_scope(unit: Unit, profile: BuyerProfile) -> bool:
+    if profile.preferred_areas:
+        return unit.area in profile.preferred_areas
+    if profile.region:
+        return unit.region == profile.region
+    return True
 
 
 def unit_card_lines(unit: Unit) -> dict[str, Any]:

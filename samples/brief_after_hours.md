@@ -3,13 +3,13 @@
 **HOT · score 8** · Immediate handoff to consultant via rotation with full transcript.
 
 - WhatsApp: +201990001122
-- Source: meta_ad (FB_LEADGEN_ZAYED_Q3) · sessions: 1
+- Source: meta_ad (FB_LEADGEN_CAIROWEST_Q3) · sessions: 1
 - Buyer type: End user
 - Looking for: 4+-bed townhouse in Sheikh Zayed
 - Status / delivery: Primary or resale · Either
 - Budget: 12-20M · Payment: Cash - flag discount eligibility
 - Timeline: ASAP - within a month · Asked for: Express interest / reserve
-- Assigned to: Mariam Fahmy
+- Assigned to: Rana Mansour
 
 ## Lead the call with
 
@@ -44,8 +44,13 @@
 
 **Buyer:** buy to live in
 
-**Bot:** Which area are you interested in?  
-  [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+**Bot:** Which part of the market are you looking at?  
+  [Cairo East] [Cairo West] [North Coast] [Not sure yet]
+
+**Buyer:** Cairo West
+
+**Bot:** Anywhere in particular in Cairo West?  
+  [Anywhere in Cairo West] [Sheikh Zayed] [6th October] [Zayed North]
 
 **Buyer:** Sheikh Zayed
 
@@ -98,4 +103,4 @@
 
 **Bot:** Perfect - I've saved your preferences and shared them with our team.
 
-**Bot:** Our team is offline right now, but Mariam Fahmy has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?
+**Bot:** Our team is offline right now, but Rana Mansour has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?

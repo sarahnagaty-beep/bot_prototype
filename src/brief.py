@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from .flow import AREA_LABELS
+from .models import AREA_LABELS, region_label
 from .inventory import unit_card_lines
 from .models import BuyerProfile, Unit
 from .scoring import routing_for
@@ -73,7 +73,9 @@ def build_brief(
         },
         "qualification": {
             "buyer_type": BUYER_TYPE_LABELS.get(profile.buyer_type, profile.buyer_type),
-            "areas": [AREA_LABELS.get(a, a) for a in profile.preferred_areas] or ["Open"],
+            "region": region_label(profile.region) or "Open",
+            "areas": [AREA_LABELS.get(a, a) for a in profile.preferred_areas]
+            or ([f"Anywhere in {region_label(profile.region)}"] if profile.region else ["Open"]),
             "unit_type": profile.unit_type or "Open",
             "bedrooms": profile.bedrooms or "Open",
             "property_status": STATUS_LABELS.get(
@@ -113,7 +115,9 @@ def _looking_for(profile: BuyerProfile) -> str:
         bits.append(f"{profile.bedrooms}-bed")
     if profile.unit_type:
         bits.append(profile.unit_type)
-    where = ", ".join(AREA_LABELS.get(a, a) for a in profile.preferred_areas)
+    where = ", ".join(AREA_LABELS.get(a, a) for a in profile.preferred_areas) or region_label(
+        profile.region
+    )
     if not bits:
         if profile.buyer_type == "investor":
             return f"Open brief - matched on returns{', ' + where if where else ''}"

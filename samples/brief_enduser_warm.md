@@ -3,7 +3,7 @@
 **WARM · score 5** · Recommend units, push to viewing/brochure. Consultant follow-up.
 
 - WhatsApp: +201112223344
-- Source: meta_ad (IG_LEADGEN_OCTOBER_Q3) · sessions: 1
+- Source: meta_ad (IG_LEADGEN_CAIROWEST_Q3) · sessions: 1
 - Buyer type: End user
 - Looking for: 3-bed apartment in 6th October
 - Status / delivery: Primary · Either
@@ -19,9 +19,9 @@
 
 - **Garden Court** OO-APT-410 ← engaged · 3-bed apartment, 150 m² · 6th October · 5.8M EGP · 10% down, ~27K/mo (monthly, equal) · delivery 2027
 - **Garden Court** OO-APT-411 · 2-bed apartment, 112 m² · 6th October · 3.9M EGP · 15% down, ~52K/mo (monthly, equal) · ready to move
+- **Cairo Gate East** ME-APT-141 · 2-bed apartment, 128 m² · Mostakbal City · 5.6M EGP · 10% down, ~27K/mo (monthly, equal) · delivery 2027
 - **Cedar Walk** NC-APT-118 · 2-bed apartment, 124 m² · New Cairo · 6.6M EGP · 20% down, ~88K/mo (monthly, equal) · ready to move
-- **West Gate Park** SZ-APT-211 · 2-bed apartment, 118 m² · Sheikh Zayed · 6.9M EGP · 10% down, ~33K/mo (monthly, equal) · delivery 2027
-- **Azure Bay** OC-CHL-501 · 2-bed chalet, 110 m² · North Coast · 7.4M EGP · 10% down, ~118K/qtr (quarterly, backloaded) · delivery 2027
+- **Alamein Towers** AL-APT-408 · 2-bed apartment, 120 m² · New Alamein · 6.8M EGP · 20% down, ~90K/mo (monthly, equal) · ready to move
 
 ## Score breakdown (internal)
 
@@ -42,8 +42,13 @@
 
 **Buyer:** buy to live in
 
-**Bot:** Which area are you interested in?  
-  [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+**Bot:** Which part of the market are you looking at?  
+  [Cairo East] [Cairo West] [North Coast] [Not sure yet]
+
+**Buyer:** Cairo West
+
+**Bot:** Anywhere in particular in Cairo West?  
+  [Anywhere in Cairo West] [Sheikh Zayed] [6th October] [Zayed North]
 
 **Buyer:** 6th October
 
@@ -100,9 +105,9 @@
 **Bot:** Based on what you told me, here are your best matches - swipe through:  
   - Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027  
   - Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move  
+  - Cairo Gate East · 2-bed apartment | 128 m² · Mostakbal City · primary | 5.6M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027  
   - Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move  
-  - West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027  
-  - Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027
+  - Alamein Towers · 2-bed apartment | 120 m² · New Alamein · primary | 6.8M EGP | 20% down, ~90K/mo (monthly, equal) | ready to move
 
 **Bot:** What would you like to do next?  
   [Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]

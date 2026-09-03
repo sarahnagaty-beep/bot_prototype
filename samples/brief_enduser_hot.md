@@ -3,13 +3,13 @@
 **HOT · score 8** · Immediate handoff to consultant via rotation with full transcript.
 
 - WhatsApp: +201001234567
-- Source: meta_ad (IG_LEADGEN_NEWCAIRO_Q3) · sessions: 1
+- Source: meta_ad (IG_LEADGEN_CAIROEAST_Q3) · sessions: 1
 - Buyer type: End user
 - Looking for: 3-bed apartment in New Cairo
 - Status / delivery: Primary · Off-plan
 - Budget: 7-12M · Payment: Installments - 15% down, over 8 years, quarterly, backloaded
 - Timeline: ASAP - within a month · Asked for: Book a viewing
-- Assigned to: Mariam Fahmy
+- Assigned to: Nada Rashad
 
 ## Lead the call with
 
@@ -45,8 +45,13 @@
 
 **Buyer:** Buy to live in
 
-**Bot:** Which area are you interested in?  
-  [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+**Bot:** Which part of the market are you looking at?  
+  [Cairo East] [Cairo West] [North Coast] [Not sure yet]
+
+**Buyer:** Cairo East
+
+**Bot:** Anywhere in particular in Cairo East?  
+  [Anywhere in Cairo East] [New Cairo] [Mostakbal City] [New Capital] [Madinaty]
 
 **Buyer:** New Cairo
 
@@ -122,4 +127,4 @@
 
 **Bot:** Perfect - I've saved your preferences and shared them with our team.
 
-**Bot:** You're now with Mariam Fahmy, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+**Bot:** You're now with Nada Rashad, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

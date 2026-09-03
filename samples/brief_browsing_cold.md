@@ -3,7 +3,7 @@
 **COLD · score 0** · Nurture: featured projects, re-engage later. No handoff.
 
 - WhatsApp: +201556667788
-- Source: meta_ad (IG_LEADGEN_BRAND_Q3) · sessions: 1
+- Source: meta_ad (IG_LEADGEN_CAIROWEST_Q3) · sessions: 1
 - Buyer type: 
 - Looking for: Not specified
 - Status / delivery: Open · Open
@@ -22,9 +22,9 @@
 **Buyer:** I'm just browsing
 
 **Bot:** No problem - here are three projects buyers are moving on this month:  
-  - Azure Bay · 4-bed villa | 330 m² · North Coast · primary | 26.5M EGP | 15% down, ~430K/qtr (quarterly, backloaded) | delivery 2029  
-  - Olive Quarter · 5-bed villa | 450 m² · Sheikh Zayed · primary | 34.0M EGP | 15% down, ~560K/qtr (quarterly, backloaded) | delivery 2029  
-  - Cedar Walk · 5-bed villa | 420 m² · New Cairo · primary | 31.0M EGP | 15% down, ~520K/qtr (quarterly, backloaded) | delivery 2029
+  - Hekma Shores · 3-bed chalet | 150 m² · Ras El Hekma · primary | 13.5M EGP | 10% down, ~215K/qtr (quarterly, backloaded) | delivery 2029  
+  - Hekma Shores · 2-bed chalet | 105 m² · Ras El Hekma · primary | 8.6M EGP | 10% down, ~137K/qtr (quarterly, backloaded) | delivery 2029  
+  - Azure Bay · 4-bed villa | 330 m² · Sidi Abdel Rahman · primary | 26.5M EGP | 15% down, ~430K/qtr (quarterly, backloaded) | delivery 2029
 
 **Bot:** Want me to save your preferences so I can alert you when something fits?  
   [Yes, save them] [No thanks]

@@ -1,6 +1,6 @@
 # No exact match · search widened · alert registered
 
-`C-f8b99487` · buyer `+201667778899` · source `meta_ad` · band **cold** (score 2)
+`C-df0110d1` · buyer `+201667778899` · source `meta_ad` · band **cold** (score 2)
 
 **Bot** `N0`  
 > Hi Nada! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -17,11 +17,18 @@
 > buy to live in
 
 **Bot** `N2`  
-> Which area are you interested in?  
-> [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+> Which part of the market are you looking at?  
+> [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer** `N2`  
 > North Coast
+
+**Bot** `N2_AREA`  
+> Anywhere in particular in North Coast?  
+> [Anywhere in North Coast] [Sidi Abdel Rahman] [Ras El Hekma] [New Alamein]
+
+**Buyer** `N2_AREA`  
+> anywhere
 
 **Bot** `N2_TYPE`  
 > And what type of home?  

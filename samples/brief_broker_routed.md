@@ -3,7 +3,7 @@
 **COLD · score 0** · Nurture: featured projects, re-engage later. No handoff.
 
 - WhatsApp: +201889990011
-- Source: meta_ad (IG_LEADGEN_BRAND_Q3) · sessions: 1
+- Source: meta_ad (IG_LEADGEN_CAIROWEST_Q3) · sessions: 1
 - Buyer type: Broker
 - Looking for: Not specified
 - Status / delivery: Open · Open

@@ -1,6 +1,6 @@
 # Free text · no buttons tapped · natural language throughout
 
-`C-6f321c82` · buyer `+201223334455` · source `website` · band **hot** (score 8)
+`C-b1cb23cb` · buyer `+201223334455` · source `website` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Sara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -17,11 +17,18 @@
 > it's for me and my family
 
 **Bot** `N2`  
-> Which area are you interested in?  
-> [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+> Which part of the market are you looking at?  
+> [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer** `N2`  
 > somewhere near the coast
+
+**Bot** `N2_AREA`  
+> Anywhere in particular in North Coast?  
+> [Anywhere in North Coast] [Sidi Abdel Rahman] [Ras El Hekma] [New Alamein]
+
+**Buyer** `N2_AREA`  
+> Ras El Hekma
 
 **Bot** `N2_TYPE`  
 > And what type of home?  
@@ -74,21 +81,23 @@
 
 **Bot** `N6`  
 > Based on what you told me, here are your best matches - swipe through:  
-> - Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move  
-> - Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027  
+> - Sandline · 2-bed chalet | 98 m² · Ras El Hekma · resale | 5.9M EGP | Cash / resale - full payment | ready to move  
 > - Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move  
 > - Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move  
-> - West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027
+> - Alamein Towers · 2-bed apartment | 120 m² · New Alamein · primary | 6.8M EGP | 20% down, ~90K/mo (monthly, equal) | ready to move  
+> - Azure Bay · 2-bed chalet | 110 m² · Sidi Abdel Rahman · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027
+
+**Bot** `N7`  
+> For about 1.2M EGP more you could move up to a 2-bed chalet (105 m²) at Hekma Shores - want to see it?  
+> [Yes, show me] [No thanks]
+
+**Buyer** `N7`  
+> book a viewing
+
+**Bot** `N7`  
+> Here it is:  
+> - Hekma Shores · 2-bed chalet | 105 m² · Ras El Hekma · primary | 8.6M EGP | 10% down, ~137K/qtr (quarterly, backloaded) | delivery 2029
 
 **Bot** `N8`  
 > What would you like to do next?  
 > [Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]
-
-**Buyer** `N8`  
-> book a viewing
-
-**Bot** `N8`  
-> Perfect - I've saved your preferences and shared them with our team.
-
-**Bot** `N9`  
-> You're now with Nour Ibrahim, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

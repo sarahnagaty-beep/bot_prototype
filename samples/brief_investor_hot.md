@@ -10,7 +10,7 @@
 - Budget: 4-7M · Payment: Cash - flag discount eligibility
 - Timeline: 1-3 months · Asked for: Talk to a consultant
 - Investor goal: Rental yield · units: 2-3 units
-- Assigned to: Youssef Adel
+- Assigned to: Dina Zaki
 
 ## Lead the call with
 
@@ -20,12 +20,12 @@
 
 ## Shortlist shown in chat
 
-- **Sandline** OC-CHL-330 · 2-bed chalet, 98 m² · North Coast · 5.9M EGP · Cash / resale - full payment · ready to move
+- **Sandline** OC-CHL-330 · 2-bed chalet, 98 m² · Ras El Hekma · 5.9M EGP · Cash / resale - full payment · ready to move
+- **Alamein Towers** AL-APT-408 · 2-bed apartment, 120 m² · New Alamein · 6.8M EGP · 20% down, ~90K/mo (monthly, equal) · ready to move
 - **Garden Court** OO-APT-411 · 2-bed apartment, 112 m² · 6th October · 3.9M EGP · 15% down, ~52K/mo (monthly, equal) · ready to move
 - **Cedar Walk** NC-APT-118 · 2-bed apartment, 124 m² · New Cairo · 6.6M EGP · 20% down, ~88K/mo (monthly, equal) · ready to move
-- **Garden Court** OO-APT-410 · 3-bed apartment, 150 m² · 6th October · 5.8M EGP · 10% down, ~27K/mo (monthly, equal) · delivery 2027
-- **West Gate Park** SZ-APT-211 · 2-bed apartment, 118 m² · Sheikh Zayed · 6.9M EGP · 10% down, ~33K/mo (monthly, equal) · delivery 2027
-- **Azure Bay** OC-CHL-501 ← engaged · 2-bed chalet, 110 m² · North Coast · 7.4M EGP · 10% down, ~118K/qtr (quarterly, backloaded) · delivery 2027
+- **Cairo Gate East** ME-APT-141 · 2-bed apartment, 128 m² · Mostakbal City · 5.6M EGP · 10% down, ~27K/mo (monthly, equal) · delivery 2027
+- **Azure Bay** OC-CHL-501 ← engaged · 2-bed chalet, 110 m² · Sidi Abdel Rahman · 7.4M EGP · 10% down, ~118K/qtr (quarterly, backloaded) · delivery 2027
 
 ## Score breakdown (internal)
 
@@ -73,11 +73,11 @@
 **Buyer:** 1-3 months
 
 **Bot:** Based on what you told me, here are your best matches - swipe through:  
-  - Sandline · 2-bed chalet | 98 m² · North Coast · resale | 5.9M EGP | Cash / resale - full payment | ready to move  
+  - Sandline · 2-bed chalet | 98 m² · Ras El Hekma · resale | 5.9M EGP | Cash / resale - full payment | ready to move  
+  - Alamein Towers · 2-bed apartment | 120 m² · New Alamein · primary | 6.8M EGP | 20% down, ~90K/mo (monthly, equal) | ready to move  
   - Garden Court · 2-bed apartment | 112 m² · 6th October · primary | 3.9M EGP | 15% down, ~52K/mo (monthly, equal) | ready to move  
   - Cedar Walk · 2-bed apartment | 124 m² · New Cairo · primary | 6.6M EGP | 20% down, ~88K/mo (monthly, equal) | ready to move  
-  - Garden Court · 3-bed apartment | 150 m² · 6th October · primary | 5.8M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027  
-  - West Gate Park · 2-bed apartment | 118 m² · Sheikh Zayed · primary | 6.9M EGP | 10% down, ~33K/mo (monthly, equal) | delivery 2027
+  - Cairo Gate East · 2-bed apartment | 128 m² · Mostakbal City · primary | 5.6M EGP | 10% down, ~27K/mo (monthly, equal) | delivery 2027
 
 **Bot:** One more worth a look - Azure Bay offers a higher-tier unit at 9.2% gross yield with off-plan launch pricing. Want to see it?  
   [Yes, show me] [No thanks]
@@ -85,7 +85,7 @@
 **Buyer:** yes, show me
 
 **Bot:** Here it is:  
-  - Azure Bay · 2-bed chalet | 110 m² · North Coast · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027
+  - Azure Bay · 2-bed chalet | 110 m² · Sidi Abdel Rahman · primary | 7.4M EGP | 10% down, ~118K/qtr (quarterly, backloaded) | delivery 2027
 
 **Bot:** What would you like to do next?  
   [Book a viewing] [Talk to a consultant] [Get full brochure] [Express interest / reserve]
@@ -94,4 +94,4 @@
 
 **Bot:** Perfect - I've saved your preferences and shared them with our team.
 
-**Bot:** You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+**Bot:** You're now with Dina Zaki, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

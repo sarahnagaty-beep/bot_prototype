@@ -41,8 +41,9 @@ if [ ! -d ".venv" ]; then
   ./.venv/bin/pip install --quiet -r requirements.txt || { bad "Could not install the bits it needs."; exit 1; }
   ok "everything installed"
 
-  ./.venv/bin/python main.py demo >/dev/null || { bad "Could not create the sample data."; exit 1; }
-  ok "sample conversations ready"
+  ./.venv/bin/python main.py scale --leads 1500 >/dev/null || {
+    bad "Could not create the sample data."; exit 1; }
+  ok "sample floor and conversations ready"
 fi
 
 PY=./.venv/bin/python
@@ -90,8 +91,8 @@ MENU
       [ -n "$file" ] && ${PAGER:-less} "$file" || bad "No sample with that number."
       ;;
     4)
-      step "Clearing the test data and rebuilding the samples"
-      $PY main.py demo
+      step "Clearing the test data and rebuilding the sample floor"
+      $PY main.py scale --leads 1500
       ;;
     5|q|quit|exit)
       printf "\nBye. Run ${BOLD}bash start.command${OFF} any time to come back.\n\n"

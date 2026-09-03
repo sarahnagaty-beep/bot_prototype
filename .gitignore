@@ -64,3 +64,6 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
+# Generated conversation data. Rebuilt by `python main.py scale` (or demo);
+# at floor scale it is tens of megabytes, so it is not committed.
+data/store.json

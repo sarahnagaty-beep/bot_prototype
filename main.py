@@ -6,6 +6,7 @@ Buyer Bot prototype - command line entry point.
     python main.py serve         run the webhook + dashboard (http://localhost:8000)
     python main.py brief L-...   print the brief a consultant receives
     python main.py dashboard     re-embed the current data into the dashboard
+    python main.py scale         generate a floor-sized dataset (thousands of leads)
 """
 
 from __future__ import annotations
@@ -63,6 +64,27 @@ def cmd_brief(args: argparse.Namespace) -> int:
     return 1
 
 
+def cmd_scale(args: argparse.Namespace) -> int:
+    """Regenerate the store at brokerage scale: a real floor, real conversations."""
+    from src.scale import generate
+
+    crm = CRM()
+    crm.reset()
+    # The named scenarios stay in the data - they are the ones with samples on
+    # disk - and the generated volume is layered on top of them.
+    build_demo(crm, echo=False)
+    print(f"Running {args.leads} conversations across {len(crm.agents)} agents...")
+    result = generate(crm, leads=args.leads, days=args.days, seed=args.seed)
+    seed_pilot_outcomes(crm, profiled=args.leads // 2, control=args.leads // 2)
+    embed(crm)
+
+    bands = result["bands"]
+    print(f"\n{sum(bands.values())} conversations · "
+          f"{bands.get('hot', 0)} hot / {bands.get('warm', 0)} warm / {bands.get('cold', 0)} cold")
+    print(f"Dashboard data refreshed. Run: python main.py serve")
+    return 0
+
+
 def cmd_dashboard(args: argparse.Namespace) -> int:
     embed(CRM())
     print(f"Embedded current data into {DASHBOARD}")
@@ -91,6 +113,12 @@ def main() -> int:
     brief = sub.add_parser("brief", help="print a buyer brief")
     brief.add_argument("lead_id")
     brief.set_defaults(func=cmd_brief)
+
+    scale = sub.add_parser("scale", help="generate a floor-sized dataset")
+    scale.add_argument("--leads", type=int, default=3000)
+    scale.add_argument("--days", type=int, default=90)
+    scale.add_argument("--seed", type=int, default=3)
+    scale.set_defaults(func=cmd_scale)
 
     dash = sub.add_parser("dashboard", help="re-embed current data into the dashboard")
     dash.set_defaults(func=cmd_dashboard)

@@ -1,6 +1,6 @@
 # After hours · handoff promises a morning call
 
-`C-309c6c29` · buyer `+201990001122` · source `meta_ad` · band **hot** (score 8)
+`C-4628e8dd` · buyer `+201990001122` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Yara! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -17,10 +17,17 @@
 > buy to live in
 
 **Bot** `N2`  
-> Which area are you interested in?  
-> [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+> Which part of the market are you looking at?  
+> [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer** `N2`  
+> Cairo West
+
+**Bot** `N2_AREA`  
+> Anywhere in particular in Cairo West?  
+> [Anywhere in Cairo West] [Sheikh Zayed] [6th October] [Zayed North]
+
+**Buyer** `N2_AREA`  
 > Sheikh Zayed
 
 **Bot** `N2_TYPE`  
@@ -91,4 +98,4 @@
 > Perfect - I've saved your preferences and shared them with our team.
 
 **Bot** `N11`  
-> Our team is offline right now, but Mariam Fahmy has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?
+> Our team is offline right now, but Rana Mansour has your full brief and will call you first thing tomorrow. Anything else I can help with meanwhile?

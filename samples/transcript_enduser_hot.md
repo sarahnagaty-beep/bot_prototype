@@ -1,6 +1,6 @@
 # End user · hot lead · books a viewing
 
-`C-785913cd` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
+`C-81f9ba10` · buyer `+201001234567` · source `meta_ad` · band **hot** (score 8)
 
 **Bot** `N0`  
 > Hi Hana! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -17,10 +17,17 @@
 > Buy to live in
 
 **Bot** `N2`  
-> Which area are you interested in?  
-> [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+> Which part of the market are you looking at?  
+> [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer** `N2`  
+> Cairo East
+
+**Bot** `N2_AREA`  
+> Anywhere in particular in Cairo East?  
+> [Anywhere in Cairo East] [New Cairo] [Mostakbal City] [New Capital] [Madinaty]
+
+**Buyer** `N2_AREA`  
 > New Cairo
 
 **Bot** `N2_TYPE`  
@@ -123,4 +130,4 @@
 > Perfect - I've saved your preferences and shared them with our team.
 
 **Bot** `N9`  
-> You're now with Mariam Fahmy, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+> You're now with Nada Rashad, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

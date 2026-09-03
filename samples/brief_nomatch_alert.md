@@ -34,10 +34,15 @@
 
 **Buyer:** buy to live in
 
-**Bot:** Which area are you interested in?  
-  [New Cairo] [Sheikh Zayed] [North Coast] [6th October] [Not sure yet]
+**Bot:** Which part of the market are you looking at?  
+  [Cairo East] [Cairo West] [North Coast] [Not sure yet]
 
 **Buyer:** North Coast
+
+**Bot:** Anywhere in particular in North Coast?  
+  [Anywhere in North Coast] [Sidi Abdel Rahman] [Ras El Hekma] [New Alamein]
+
+**Buyer:** anywhere
 
 **Bot:** And what type of home?  
   [Apartment] [Duplex] [Townhouse] [Twinhouse] [Villa] [Chalet]

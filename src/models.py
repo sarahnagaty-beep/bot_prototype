@@ -17,12 +17,49 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+# Brokerages segment the floor by region first, compound second - so the bot
+# asks in that order and every rollup aggregates to these three buckets.
+REGIONS: dict[str, dict[str, Any]] = {
+    "cairo_east": {
+        "label": "Cairo East",
+        "areas": ["new_cairo", "mostakbal_city", "new_capital", "madinaty"],
+    },
+    "cairo_west": {
+        "label": "Cairo West",
+        "areas": ["sheikh_zayed", "6th_october", "zayed_north"],
+    },
+    "north_coast": {
+        "label": "North Coast",
+        "areas": ["sidi_abdel_rahman", "ras_el_hekma", "alamein"],
+    },
+}
+
+REGION_LABELS = {key: value["label"] for key, value in REGIONS.items()}
+
 AREA_LABELS = {
     "new_cairo": "New Cairo",
+    "mostakbal_city": "Mostakbal City",
+    "new_capital": "New Capital",
+    "madinaty": "Madinaty",
     "sheikh_zayed": "Sheikh Zayed",
-    "north_coast": "North Coast",
     "6th_october": "6th October",
+    "zayed_north": "Zayed North",
+    "sidi_abdel_rahman": "Sidi Abdel Rahman",
+    "ras_el_hekma": "Ras El Hekma",
+    "alamein": "New Alamein",
 }
+
+AREA_TO_REGION = {
+    area: region for region, value in REGIONS.items() for area in value["areas"]
+}
+
+
+def region_of(area: str) -> str:
+    return AREA_TO_REGION.get(area, "")
+
+
+def region_label(region: str) -> str:
+    return REGION_LABELS.get(region, region.replace("_", " ").title() if region else "")
 
 
 # --------------------------------------------------------------------------
@@ -83,6 +120,7 @@ class Unit:
     project: str
     developer: str
     area: str
+    region: str
     unit_type: str
     bedrooms: int
     size_sqm: int
@@ -130,6 +168,7 @@ class BuyerProfile:
 
     # Qualification
     buyer_type: str = ""          # end_user | investor | broker
+    region: str = ""              # cairo_east | cairo_west | north_coast
     preferred_areas: list[str] = field(default_factory=list)
     area_priority: str = ""       # work | schools | coast | quiet
     unit_type: str = ""
@@ -164,6 +203,8 @@ class BuyerProfile:
     selected_unit_id: str = ""
     concerns: list[str] = field(default_factory=list)
     consultant: str = ""
+    consultant_id: str = ""
+    consultant_team: str = ""
     last_node: str = "N0"
     sessions: int = 1
     updated_at: str = field(default_factory=_now)
@@ -195,6 +236,8 @@ class BuyerProfile:
         if self.preferred_areas:
             pretty = [AREA_LABELS.get(a, a.replace("_", " ")) for a in self.preferred_areas]
             bits.append("in " + ", ".join(pretty))
+        elif self.region:
+            bits.append("in " + region_label(self.region))
         if self.budget_band:
             bits.append(f"around {self.budget_band}")
         return " ".join(bits)

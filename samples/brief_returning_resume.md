@@ -9,7 +9,7 @@
 - Status / delivery: Primary · Off-plan
 - Budget: 7-12M · Payment: Installments - 15% down, over 8 years, quarterly, backloaded
 - Timeline: ASAP - within a month · Asked for: Express interest / reserve
-- Assigned to: Youssef Adel
+- Assigned to: Adel Bahgat
 
 ## Lead the call with
 
@@ -59,4 +59,4 @@
 
 **Bot:** Perfect - I've saved your preferences and shared them with our team.
 
-**Bot:** You're now with Youssef Adel, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?
+**Bot:** You're now with Adel Bahgat, your property consultant - they'll reach out within 2 hours with the full details. Anything else I can help with meanwhile?

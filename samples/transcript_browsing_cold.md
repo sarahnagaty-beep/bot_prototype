@@ -1,6 +1,6 @@
 # Just browsing · cold · exits to nurture
 
-`C-698e6f89` · buyer `+201556667788` · source `meta_ad` · band **cold** (score 0)
+`C-0cda9e08` · buyer `+201556667788` · source `meta_ad` · band **cold** (score 0)
 
 **Bot** `N0`  
 > Hi Dalia! Welcome to Palm Ridge Living. I can help you find the right home or investment in Cairo. Mind if I ask a few quick questions so I can shortlist the best options for you?  
@@ -11,9 +11,9 @@
 
 **Bot** `N0`  
 > No problem - here are three projects buyers are moving on this month:  
-> - Azure Bay · 4-bed villa | 330 m² · North Coast · primary | 26.5M EGP | 15% down, ~430K/qtr (quarterly, backloaded) | delivery 2029  
-> - Olive Quarter · 5-bed villa | 450 m² · Sheikh Zayed · primary | 34.0M EGP | 15% down, ~560K/qtr (quarterly, backloaded) | delivery 2029  
-> - Cedar Walk · 5-bed villa | 420 m² · New Cairo · primary | 31.0M EGP | 15% down, ~520K/qtr (quarterly, backloaded) | delivery 2029
+> - Hekma Shores · 3-bed chalet | 150 m² · Ras El Hekma · primary | 13.5M EGP | 10% down, ~215K/qtr (quarterly, backloaded) | delivery 2029  
+> - Hekma Shores · 2-bed chalet | 105 m² · Ras El Hekma · primary | 8.6M EGP | 10% down, ~137K/qtr (quarterly, backloaded) | delivery 2029  
+> - Azure Bay · 4-bed villa | 330 m² · Sidi Abdel Rahman · primary | 26.5M EGP | 15% down, ~430K/qtr (quarterly, backloaded) | delivery 2029
 
 **Bot** `N_BROWSE_SAVE`  
 > Want me to save your preferences so I can alert you when something fits?  

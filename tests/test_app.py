@@ -84,14 +84,14 @@ def test_a_restart_resumes_the_buyer_where_they_stopped(client, crm):
     client.post("/webhook", json=_inbound("yes"))
     client.post("/webhook", json=_inbound("buy to live in"))
     before = crm.load_session("201001234567")
-    assert before["awaiting"] == "N2"  # asking for the area
+    assert before["awaiting"] == "N2"  # asking which part of the market
 
     app_module.sessions.clear()  # simulate a process restart / second worker
 
-    resumed = client.post("/webhook", json=_inbound("New Cairo")).json()["handled"][0]
+    resumed = client.post("/webhook", json=_inbound("Cairo East")).json()["handled"][0]
     assert resumed["conversation_id"] == before["conversation_id"]
-    assert crm.get_profile("201001234567").preferred_areas == ["new_cairo"]
-    assert resumed["awaiting"] == "N2_TYPE"  # moved on, did not start over
+    assert crm.get_profile("201001234567").region == "cairo_east"
+    assert resumed["awaiting"] == "N2_AREA"  # moved on, did not start over
 
 
 def test_a_retried_webhook_is_not_answered_twice(client, crm):
